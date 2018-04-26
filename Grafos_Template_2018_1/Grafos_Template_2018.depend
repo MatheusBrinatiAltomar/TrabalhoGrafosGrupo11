@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1524713119 source:c:\users\hal\documents\github\trabalhografosgrupo11\grafos_template_2018_1\src\menu.cpp
+	"Menu.h"
+	<string>
+	<iostream>
+
+1524713105 c:\users\hal\documents\github\trabalhografosgrupo11\grafos_template_2018_1\src\menu.h
+	<string>
+

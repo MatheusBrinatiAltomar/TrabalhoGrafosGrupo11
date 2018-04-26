@@ -2,13 +2,14 @@
 #define GRAFO_H_INCLUDED
 
 #include "No.h"
-
+#include  <vector>
 class Grafo{
     private:
         int ordem;
         int grauGrafo;
         int numArestas;
         No *listaNos;
+        vector <No> *nodeList;
     public:
         Grafo();
         ~Grafo();
