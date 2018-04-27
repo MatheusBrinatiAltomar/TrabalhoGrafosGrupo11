@@ -1,12 +1,6 @@
-#include <vector>
-#include <iostream>
+#include "headers/bibliotecas.h"
 
-#include "headers/Aresta.h"
-#include "headers/Grafo.h"
-#include "headers/No.h"
-#include "headers/Menu.h"
 
-using namespace std;
 
 int main(){
     Menu menu = Menu();

@@ -36,8 +36,12 @@
 		<Unit filename="headers/Grafo.h" />
 		<Unit filename="headers/Menu.h" />
 		<Unit filename="headers/No.h" />
+		<Unit filename="headers/bibliotecas.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/Aresta.cpp" />
+		<Unit filename="src/Grafo.cpp" />
 		<Unit filename="src/Menu.cpp" />
+		<Unit filename="src/No.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />

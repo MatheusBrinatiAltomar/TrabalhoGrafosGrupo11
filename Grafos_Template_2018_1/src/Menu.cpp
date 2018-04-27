@@ -1,6 +1,5 @@
-#include "../headers/Menu.h"
-#include <string>
-#include <iostream>
+#include "../headers/bibliotecas.h"
+
 using namespace std;
 
 
