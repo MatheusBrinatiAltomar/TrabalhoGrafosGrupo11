@@ -1,14 +1,12 @@
 #ifndef MENU_H
 #define MENU_H
 #include <string>
-#include <iostream>
-
 using namespace std;
 class Menu
 {
     public:
         Menu();
-        virtual ~Menu();
+        ~Menu();
         void printText(string texto);
         void iniciate();
         void letraA();
@@ -24,6 +22,8 @@ class Menu
         void letraK();
         void letraL();
         void letraM();
+    protected:
+
     private:
 };
 

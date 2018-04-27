@@ -1,4 +1,4 @@
-#include "../Menu.h"
+#include "../headers/Menu.h"
 #include <string>
 #include <iostream>
 using namespace std;
@@ -48,6 +48,9 @@ void Menu::letraJ(){
 void Menu::letraK(){
             printText("A");
 }
+void Menu::letraL(){
+            printText("A");
+}
 void Menu::letraM(){
             printText("A");
 }
@@ -76,43 +79,43 @@ void Menu::iniciate(){
             cin >> num;
         switch (num){
             case 1:
-//                letraA();
+              letraA();
                 break;
             case 2:
-        //        letraB();
+               letraB();
                 break;
             case 3:
-      //          letraC();
+               letraC();
                 break;
             case 4:
-      //          letraD();
+               letraD();
                 break;
             case 5:
-//                letraE();
+           letraE();
                 break;
             case 6:
-  //              letraF();
+              letraF();
                 break;
             case 7:
-    //            letraG();
+               letraG();
                 break;
             case 8:
-            //    letraH();
+              letraH();
                 break;
             case 9:
-      //          letraI();
+                letraI();
                 break;
             case 10:
-    //            letraJ();
+                letraJ();
                 break;
             case 11:
-             //0   letraK();
+               letraK();
                 break;
             case 12:
-      //          letraL();
+                letraL();
                 break;
             case 13:
-      //          letraM();
+               letraM();
                 break;
             case 0:
                 cout << "Finalizando Programa" << endl;

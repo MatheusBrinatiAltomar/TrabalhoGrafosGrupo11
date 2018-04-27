@@ -13,8 +13,6 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
-					<Add directory="include" />
-					<Add directory="../Grafos_Template_2018_1" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -24,8 +22,6 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
-					<Add directory="include" />
-					<Add directory="../Grafos_Template_2018_1" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -36,12 +32,12 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="Aresta.h" />
-		<Unit filename="Grafo.h" />
-		<Unit filename="Menu.h" />
-		<Unit filename="No.h" />
+		<Unit filename="headers/Aresta.h" />
+		<Unit filename="headers/Grafo.h" />
+		<Unit filename="headers/Menu.h" />
+		<Unit filename="headers/No.h" />
+		<Unit filename="main.cpp" />
 		<Unit filename="src/Menu.cpp" />
-		<Unit filename="src/main.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />
