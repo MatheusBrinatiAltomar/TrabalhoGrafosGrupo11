@@ -40,10 +40,8 @@
 		<Unit filename="Grafo.h" />
 		<Unit filename="Menu.h" />
 		<Unit filename="No.h" />
-		<Unit filename="src/Main.cpp">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
 		<Unit filename="src/Menu.cpp" />
+		<Unit filename="src/main.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />

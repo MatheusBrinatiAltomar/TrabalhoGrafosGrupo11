@@ -3,6 +3,8 @@
 
 #include "No.h"
 #include  <vector>
+
+using namespace std;
 class Grafo{
     private:
         int ordem;
