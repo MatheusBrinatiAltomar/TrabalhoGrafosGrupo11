@@ -5,15 +5,11 @@
 
 class Grafo{
     private:
+
         vector <No> listaNos;
     public:
         Grafo();
         ~Grafo();
-        No* getListaNos();
-        int getOrdem();
-        int getGrau();
-        int getNumArestas();
-        void setListaNos(No*);
         void adcionarNo(int  id,float pesoNo);
         void removerNo(int id);
 };
