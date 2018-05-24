@@ -5,15 +5,16 @@ class Aresta{
     private:
         float pesoAresta;
         int iD_No;
-        Aresta *proxAresta;
+        bool arco;
     public:
-        Aresta();
+        Aresta(int iD_No);
+        Aresta(int iD_No, bool arc);
         ~Aresta();
         float getPesoAresta();
         int getIDNo();
-        Aresta* getProxAresta();
-        void setPesoAresta(float);
-        void setProxAresta(Aresta*);
+        bool getArco();
+        void setPesoAresta(float peso);
+        void setArco(bool arc);
 };
 
 
