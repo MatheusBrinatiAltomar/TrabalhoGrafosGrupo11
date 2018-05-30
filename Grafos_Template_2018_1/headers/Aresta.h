@@ -7,8 +7,8 @@ class Aresta{
         int iD_No;
         bool arco;
     public:
-        Aresta(int iD_No);
-        Aresta(int iD_No, bool arc);
+        Aresta(int iD_No,float pesoA);
+        Aresta(int iD_No,bool arc,float pesoA);
         ~Aresta();
         float getPesoAresta();
         int getIDNo();

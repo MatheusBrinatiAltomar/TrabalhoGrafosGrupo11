@@ -5,7 +5,6 @@
 
 class Grafo{
     private:
-
         vector <No> listaNos;
     public:
         Grafo();

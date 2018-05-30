@@ -67,13 +67,13 @@
 	"Grafo.h"
 	"Menu.h"
 
-1527175266 c:\users\getcomp01\documents\trabalhografosgrupo11\grafos_template_2018_1\headers\aresta.h
+1527258531 c:\users\getcomp01\documents\trabalhografosgrupo11\grafos_template_2018_1\headers\aresta.h
 
-1527175065 c:\users\getcomp01\documents\trabalhografosgrupo11\grafos_template_2018_1\headers\no.h
+1527258247 c:\users\getcomp01\documents\trabalhografosgrupo11\grafos_template_2018_1\headers\no.h
 	"bibliotecas.h"
 	"Aresta.h"
 
-1527174933 c:\users\getcomp01\documents\trabalhografosgrupo11\grafos_template_2018_1\headers\grafo.h
+1527257281 c:\users\getcomp01\documents\trabalhografosgrupo11\grafos_template_2018_1\headers\grafo.h
 	"bibliotecas.h"
 
 1527171690 c:\users\getcomp01\documents\trabalhografosgrupo11\grafos_template_2018_1\headers\menu.h
@@ -81,7 +81,7 @@
 
 1527171691 source:c:\users\getcomp01\documents\trabalhografosgrupo11\grafos_template_2018_1\src\no.cpp
 
-1527175185 source:c:\users\getcomp01\documents\trabalhografosgrupo11\grafos_template_2018_1\src\aresta.cpp
+1527256605 source:c:\users\getcomp01\documents\trabalhografosgrupo11\grafos_template_2018_1\src\aresta.cpp
 	"../headers/bibliotecas.h"
 
 1527171691 source:c:\users\getcomp01\documents\trabalhografosgrupo11\grafos_template_2018_1\src\grafo.cpp
