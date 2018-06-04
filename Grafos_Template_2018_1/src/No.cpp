@@ -1,5 +1,25 @@
 #include "../headers/bibliotecas.h"
 
+No::No()
+{
+
+}
+
+No::No(int iD, int grau, int grauEntrada, int grauSaida, float pesoNo)
+{
+    this->iD = iD;
+    this->grau = grau;
+    this->grauEntrada = grauEntrada;
+    this->grauSaida = grauSaida;
+    this->pesoNo = pesoNo;
+    vector <Aresta> listaAresta;
+}
+
+No::~No()
+{
+
+}
+
 void No::setGrau(int g)
 {
     grau = g;
@@ -57,7 +77,7 @@ void No::adicionaAresta(int id,float pesoA)
         grau += 2;
     else
         grau += 1;
-    listaAresta.push_back(a);
+    listaAresta.push_back(*a);
 }
 
 void No::adicionaAresta(int id,float pesoA,bool arco)
@@ -75,7 +95,7 @@ void No::adicionaAresta(int id,float pesoA,bool arco)
     }
 }
 
-void No::removeAresta(int id)
+void No::removeAresta(int id, bool arco)
 {
     if(arco == false)
     {

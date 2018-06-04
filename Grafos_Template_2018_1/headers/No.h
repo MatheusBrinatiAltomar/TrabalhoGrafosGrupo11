@@ -10,9 +10,9 @@ class No{
         int grauEntrada;
         int grauSaida;
         float pesoNo;
-        vector <Aresta> listaAresta;
     public:
         No();
+        No(int iD, int grau, int grauEntrada, int grauSaida, float pesoNo);
         ~No();
         int getID();
         int getGrau();
@@ -26,7 +26,8 @@ class No{
         void setPeso(float pesoN);
         void adicionaAresta(int id,float pesoA,bool arco);
         void adicionaAresta(int id,float pesoA);
-        void removeAresta(int id);
+        void removeAresta(int id, bool arco);
+        vector <Aresta> listaAresta;
 };
 
 #endif // NO_H_INCLUDED

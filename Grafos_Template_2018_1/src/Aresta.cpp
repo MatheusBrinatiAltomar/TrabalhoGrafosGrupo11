@@ -1,6 +1,5 @@
 #include "../headers/bibliotecas.h"
 
-
 Aresta::Aresta(int id, bool arc,float pesoA)
 {
     iD_No = id;
@@ -13,6 +12,11 @@ Aresta::Aresta(int id,float pesoA)
     iD_No = id;
     arco = true;
     pesoAresta = pesoA;
+}
+
+Aresta::~Aresta()
+{
+
 }
 
 void Aresta::setPesoAresta(float peso)
