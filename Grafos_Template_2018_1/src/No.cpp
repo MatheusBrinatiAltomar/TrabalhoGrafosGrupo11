@@ -76,21 +76,16 @@ float No::getPeso()
 
  void No::adicionaAresta(int id, float pesoA)
 {
-    cout << "asudh" << endl;
+    //cout << "asudh" << endl;
     Aresta a =  Aresta(id,pesoA);
     if(id == iD)
         grau += 2;
         else
         grau += 1;
-     for(std::vector<Aresta>::iterator a = listaAresta.begin(); a != listaAresta.end(); ++a){
-        cout << a->getIDNo() << endl;
-     }
     listaAresta.push_back(a);
-    for(std::vector<Aresta>::iterator a = listaAresta.begin(); a != listaAresta.end(); ++a){
-        cout << a->getIDNo() << endl;
-     }
-
 }
+
+
 
 void No::adicionaAresta(int id,float pesoA,bool arco)
 {

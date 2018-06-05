@@ -25,14 +25,19 @@ void Grafo::removerNo (int id)
     vector <No>::iterator it;
     vector <Aresta>::iterator a;
     int i=0,j=0;
-    it = listaNos.begin();
-    for(i=0;i<listaNos.size() || it != listaNos.end() ;i++){
-        int index = distance(listaNos.begin(), it);
-        a = listaNos[i].listaAresta.begin();
-        for(j=i;j<listaNos[i].listaAresta.size();j++){
-            if(listaNos[i].listaAresta[j].getIDNo() == id ){
-                    listaNos[i].listaAresta.erase(a + j);
-            }
+    for(it = listaNos.begin() ; it != listaNos.end(); ++it, i++ ){
+        if ( it->getID() == id ){
+            listaNos.erase( listaNos.begin() + i  );
+        }
+    }
+    i =0;
+    for(it = listaNos.begin(); it != listaNos.end(); ++it,i++){
+            j = 0;
+        for(std::vector<Aresta>::iterator a = listaNos[i].listaAresta.begin(); a != listaNos[i].listaAresta.end() && j < listaNos[i].listaAresta.size() ;   ++a){
+                if(a->getIDNo() == id) {
+                    listaNos[i].listaAresta.erase( listaNos[i].listaAresta.begin() + j );
+                }
+                j++;
         }
     }
 }
@@ -40,15 +45,14 @@ void Grafo::removerNo (int id)
 void Grafo::showInfo(){
     int i=0;
     for (std::vector<No>::iterator it = listaNos.begin(); it != listaNos.end(); ++it) {
-			cout << "No: " << it->getID() << endl;
+cout << "No: " << it->getID() << endl;
 			for(std::vector<Aresta>::iterator a = listaNos[i].listaAresta.begin(); a != listaNos[i].listaAresta.end(); ++a){
                 cout << a->getIDNo() << endl;
 			}
 			i++;
-			//<< " Aresta: " << it->listaAresta[0].getIDNo() <<  " Peso:" << it->listaAresta[0].getPesoAresta()
+
     }
-   // cout << "Aresta: " << listaNos[4].getAresta(1) << endl;
-    cout << "size: " << listaNos.size();
+    cout << "size: " << listaNos.size() << endl;
 
 }
 
@@ -86,8 +90,8 @@ void Grafo::readFile(string path)
             else {
                 if (count == 0) {
                     id = value;
-                    if(!noEstaNoGrafo(id)){
-                        adcionarNo(value,0);
+                    if(!noEstaNoGrafo(id)){ // Nó está mo grafo?
+                        adcionarNo(id,0);
                         i++;
                     }
                 }
@@ -95,18 +99,16 @@ void Grafo::readFile(string path)
                     id_destino = value;
                 }
                 else if( count == 2){
-                    listaNos[id].adicionaAresta(id_destino,value);
-                    //cout << "No: " << id << endl;
-                  /* for(std::vector<Aresta>::iterator a = listaNos[id].listaAresta.begin(); a != listaNos[id].listaAresta.end(); ++a){
-                cout << a->getIDNo() << endl;
-			} */
+                    for (std::vector<No>::iterator it = listaNos.begin(); it != listaNos.end(); ++it) {
+                            if( it->getID() == id )
+                                    it->adicionaAresta(id_destino,value);
+                    }
 
                 }
                 }
 				count++;
 		}
-       // cout << "Aresta: " << listaNos[4].getAresta(1) << endl;
-		//showInfo();
+		showInfo();
     }
 	else {
 		cerr << "Couldn't open file!" << endl;
