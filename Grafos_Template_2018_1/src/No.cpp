@@ -37,12 +37,12 @@ void No::setGrauSaida(int grauS)
 
 void No::setPeso(float pesoN)
 {
-    pesoNo = pesoN;
+    this->pesoNo = pesoN;
 }
 
 void No::setID(int id)
 {
-    iD = id;
+    this->iD = id;
 }
 
 int No::getGrau()
@@ -60,6 +60,10 @@ int No::getGrauEntrada()
     return grauEntrada;
 }
 
+float No::getAresta(int index){
+    return listaAresta[index].getIDNo();
+}
+
 int No::getID()
 {
     return iD;
@@ -70,14 +74,22 @@ float No::getPeso()
     return pesoNo;
 }
 
-void No::adicionaAresta(int id,float pesoA)
+ void No::adicionaAresta(int id, float pesoA)
 {
-    Aresta* a = new Aresta(id,pesoA);
+    cout << "asudh" << endl;
+    Aresta a =  Aresta(id,pesoA);
     if(id == iD)
         grau += 2;
-    else
+        else
         grau += 1;
-    listaAresta.push_back(*a);
+     for(std::vector<Aresta>::iterator a = listaAresta.begin(); a != listaAresta.end(); ++a){
+        cout << a->getIDNo() << endl;
+     }
+    listaAresta.push_back(a);
+    for(std::vector<Aresta>::iterator a = listaAresta.begin(); a != listaAresta.end(); ++a){
+        cout << a->getIDNo() << endl;
+     }
+
 }
 
 void No::adicionaAresta(int id,float pesoA,bool arco)

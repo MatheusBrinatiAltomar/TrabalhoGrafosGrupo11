@@ -14,6 +14,7 @@ Aresta::Aresta(int id,float pesoA)
     pesoAresta = pesoA;
 }
 
+
 Aresta::~Aresta()
 {
 
@@ -44,3 +45,7 @@ int Aresta::getIDNo()
     return iD_No;
 }
 
+int Aresta::setIDNo(int id)
+{
+    this->iD_No = id;
+}

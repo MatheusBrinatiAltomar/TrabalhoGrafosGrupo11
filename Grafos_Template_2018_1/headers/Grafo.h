@@ -11,6 +11,10 @@ class Grafo{
         ~Grafo();
         void adcionarNo(int  id,float pesoNo);
         void removerNo(int id);
+        void readFile(string path);
+        void showInfo();
+        bool noEstaNoGrafo(int index);
 };
+
 
 #endif // GRAFO_H_INCLUDED

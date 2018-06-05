@@ -12,6 +12,8 @@ class Aresta{
         ~Aresta();
         float getPesoAresta();
         int getIDNo();
+
+        int setIDNo(int id);
         bool getArco();
         void setPesoAresta(float peso);
         void setArco(bool arc);

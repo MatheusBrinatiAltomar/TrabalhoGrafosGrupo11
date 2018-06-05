@@ -27,6 +27,7 @@ class No{
         void adicionaAresta(int id,float pesoA,bool arco);
         void adicionaAresta(int id,float pesoA);
         void removeAresta(int id, bool arco);
+        float getAresta(int index);
         vector <Aresta> listaAresta;
 };
 
