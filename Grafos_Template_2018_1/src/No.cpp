@@ -2,7 +2,9 @@
 
 No::No()
 {
-
+    this->grau=0;
+    this->grauEntrada=0;
+    this->grauSaida=0;
 }
 
 No::No(int iD, int grau, int grauEntrada, int grauSaida, float pesoNo)

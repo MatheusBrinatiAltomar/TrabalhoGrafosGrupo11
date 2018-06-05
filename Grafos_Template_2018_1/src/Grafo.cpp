@@ -115,3 +115,42 @@ void Grafo::readFile(string path)
 	}
 
 }
+
+int Grafo::getOrdemGrafo()
+{
+    return listaNos.size();
+}
+
+bool Grafo::grafoTrivial()
+{
+    if(listaNos.size() == 1){
+        if(listaNos[0].listaAresta.size() == 0 )
+            return true;
+    }
+    return false;
+}
+bool Grafo::grafoNulo()
+{
+    if(listaNos.size() == 0 ){
+        return true;
+    } else {
+        return false;
+    }
+}
+
+void Grafo::printSequenciaGraus()
+{
+    for (std::vector<No>::iterator it = listaNos.begin(); it != listaNos.end(); ++it) {
+            cout << it->getGrau() << " ";
+    }
+    cout <<""<<endl;
+}
+
+int Grafo::getGrauNo(int id)
+{
+    for (std::vector<No>::iterator it = listaNos.begin(); it != listaNos.end(); ++it) {
+         if( it->getID() == id )
+                 return it->getGrau();
+    }
+}
+

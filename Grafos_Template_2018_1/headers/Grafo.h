@@ -14,6 +14,11 @@ class Grafo{
         void readFile(string path);
         void showInfo();
         bool noEstaNoGrafo(int index);
+        int getOrdemGrafo();
+        bool grafoTrivial();
+        bool grafoNulo();
+        void printSequenciaGraus();
+        int getGrauNo(int id);
 };
 
 

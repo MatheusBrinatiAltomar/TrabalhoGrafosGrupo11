@@ -15,7 +15,9 @@ void Menu::printText(string texto){
 }
 
 void Menu::letraA(){
-            printText("A");
+            printText("Digite o endereco do arquivo");
+            string path;
+            cin >> path;
         }
 void Menu::letraB(){
             printText("A");
