@@ -5,21 +5,24 @@
 
 class Grafo{
     private:
-        int ordem;
-        int grauGrafo;
-        int numArestas;
-        //No *listaNos;
         vector <No> listaNos;
     public:
         Grafo();
         ~Grafo();
-        No* getListaNos();
-        int getOrdem();
-        int getGrau();
-        int getNumArestas();
-        void setListaNos(No*);
-        //void adcionarNo(int  id,float pesoNo);
-        //void removerNo(int id);
+        void adcionarNo(int  id,float pesoNo);
+        void removerNo(int id);
+        void readFile(string path);
+        void showInfo();
+        bool noEstaNoGrafo(int index);
+        int getOrdemGrafo();
+        bool grafoTrivial();
+        bool grafoNulo();
+        void printSequenciaGraus();
+        int getGrauNo(int id);
+        bool grafoEKRegular(int k);
+        void mostrarVizinhacaAberta(int id);
+        void mostrarVizinhacaFechada(int id);
 };
+
 
 #endif // GRAFO_H_INCLUDED

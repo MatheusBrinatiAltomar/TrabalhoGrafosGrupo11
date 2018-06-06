@@ -55,3 +55,41 @@
 
 1524840325 source:/home/arnaldo/trabalhoGrafos/TrabalhoGrafosGrupo11/Grafos_Template_2018_1/src/No.cpp
 
+1528320954 source:c:\users\pichau\downloads\grafos\trabalhografosgrupo11\grafos_template_2018_1\main.cpp
+	"headers/bibliotecas.h"
+
+1528241360 c:\users\pichau\downloads\grafos\trabalhografosgrupo11\grafos_template_2018_1\headers\bibliotecas.h
+	<vector>
+	<iostream>
+	<string>
+	<fstream>
+	"Aresta.h"
+	"No.h"
+	"Grafo.h"
+	"Menu.h"
+
+1528241360 c:\users\pichau\downloads\grafos\trabalhografosgrupo11\grafos_template_2018_1\headers\aresta.h
+
+1528241360 c:\users\pichau\downloads\grafos\trabalhografosgrupo11\grafos_template_2018_1\headers\no.h
+	"bibliotecas.h"
+	"Aresta.h"
+
+1528322223 c:\users\pichau\downloads\grafos\trabalhografosgrupo11\grafos_template_2018_1\headers\grafo.h
+	"bibliotecas.h"
+
+1528241360 c:\users\pichau\downloads\grafos\trabalhografosgrupo11\grafos_template_2018_1\headers\menu.h
+	"bibliotecas.h"
+
+1528241360 source:c:\users\pichau\downloads\grafos\trabalhografosgrupo11\grafos_template_2018_1\src\aresta.cpp
+	"../headers/bibliotecas.h"
+
+1528241360 source:c:\users\pichau\downloads\grafos\trabalhografosgrupo11\grafos_template_2018_1\src\menu.cpp
+	"../headers/bibliotecas.h"
+
+1528241360 source:c:\users\pichau\downloads\grafos\trabalhografosgrupo11\grafos_template_2018_1\src\no.cpp
+	"../headers/bibliotecas.h"
+
+1528321520 source:c:\users\pichau\downloads\grafos\trabalhografosgrupo11\grafos_template_2018_1\src\grafo.cpp
+	"../headers/bibliotecas.h"
+	<vector>
+
