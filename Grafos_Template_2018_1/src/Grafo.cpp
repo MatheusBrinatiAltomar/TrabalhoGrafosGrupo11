@@ -45,7 +45,7 @@ void Grafo::removerNo (int id)
 void Grafo::showInfo(){
     int i=0;
     for (std::vector<No>::iterator it = listaNos.begin(); it != listaNos.end(); ++it) {
-cout << "No: " << it->getID() << endl;
+            cout << "No: " << it->getID() << endl;
 			for(std::vector<Aresta>::iterator a = listaNos[i].listaAresta.begin(); a != listaNos[i].listaAresta.end(); ++a){
                 cout << a->getIDNo() << endl;
 			}
@@ -64,6 +64,31 @@ bool Grafo::noEstaNoGrafo(int index)
         }
     }
     return false;
+}
+
+ void Grafo::writeFile(string path)
+{
+    ofstream f(path.c_str());
+    if(f.is_open()){
+        f << listaNos.size();
+        f << "\n";
+        for (std::vector<No>::iterator it = listaNos.begin(); it != listaNos.end(); ++it) {
+			for(std::vector<Aresta>::iterator a = it->listaAresta.begin(); a != it->listaAresta.end(); ++a){
+                f << it->getID();
+                f << " " ;
+                f << a->getIDNo();
+                f << " ";
+                f << a->getPesoAresta();
+                f << "\n";
+        }
+
+
+    }
+    } else {
+        cerr << "Couldn't open file!" << endl;
+    }
+
+
 }
 
 void Grafo::readFile(string path)

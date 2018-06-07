@@ -12,6 +12,7 @@ class Grafo{
         void adcionarNo(int  id,float pesoNo);
         void removerNo(int id);
         void readFile(string path);
+        void writeFile(string path);
         void showInfo();
         bool noEstaNoGrafo(int index);
         int getOrdemGrafo();
