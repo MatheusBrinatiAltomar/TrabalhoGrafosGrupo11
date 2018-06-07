@@ -12,6 +12,7 @@ class Grafo{
         void adcionarNo(int  id,float pesoNo);
         void removerNo(int id);
         void readFile(string path);
+        void writeFile(string path);
         void showInfo();
         bool noEstaNoGrafo(int index);
         int getOrdemGrafo();
@@ -19,6 +20,9 @@ class Grafo{
         bool grafoNulo();
         void printSequenciaGraus();
         int getGrauNo(int id);
+        bool grafoEKRegular(int k);
+        void mostrarVizinhacaAberta(int id);
+        void mostrarVizinhacaFechada(int id);
 };
 
 
