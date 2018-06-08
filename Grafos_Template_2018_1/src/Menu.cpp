@@ -4,7 +4,6 @@ using namespace std;
 
 
 
-
 Menu::Menu(Grafo grafo)
 {
     grafoUsado = grafo;
@@ -16,16 +15,28 @@ void Menu::printText(string texto){
 
 void Menu::letraA()
 {
-    printText("Digite o endereco do arquivo");
-    string path;
-    cin >> path;
-    grafoUsado.readFile(path);
-    printText("Arquivo lido com sucesso");
-    this->iniciate();
+    string escolha;
+    printText("Quer ler ou escrever o grafo atual num arquivo?");
+    printText("Digite ler para ler arquivo");
+    printText("Digite escrever para escrever arquivo");
+    cin >> escolha;
+    if(escolha == "ler" ){
+        printText("Digite o endereco do arquivo");
+        string path;
+        cin >> path;
+        grafoUsado.readFile(path);
+        this->iniciate();
+    } else if(escolha == "escrever" ){
+        printText("Digite o endereco do arquivo");
+        string path;
+        cin >> path;
+        grafoUsado.writeFile(path);
+        this->iniciate();
+    }
 }
 void Menu::letraB()
 {
-    printText("Deseja fazer a operação com nó ou com aresta?");
+    printText("Deseja fazer a operação com no ou com aresta?");
     string resposta;
     cin >> resposta;
     if (resposta == "no")
@@ -35,46 +46,57 @@ void Menu::letraB()
         cin >> resposta2;
         if (resposta2 == "remover")
         {
-            printText("Qual o id do nó a ser retirado?");
+            printText("Qual o id do no a ser retirado?");
             int id;
             cin >> id;
             grafoUsado.removerNo(id);
-            printText("Nó removido com sucesso!");
+            printText("No removido com sucesso!");
         }
         else
         {
-            printText("Qual o id do nó a ser adicionado?");
+            printText("Qual o id do no a ser adicionado?");
             int id;
             cin >> id;
-            printText("Qual o peso do nó a ser adicionado?");
+            printText("Qual o peso do no a ser adicionado?");
             float peso;
             cin >> peso;
             grafoUsado.adcionarNo(id, peso);
-            printText("Nó adicionado com sucesso!");
+            printText("No adicionado com sucesso!");
         }
     }
     else
     {
-        printText("A partir de qual nó se deseja fazer a operação? (digite o id do nó)");
-        int idNo;
-        cin >> idNo;
         printText("Deseja remover ou adicionar uma aresta?");
         string resposta2;
         cin >> resposta2;
         if (resposta2 == "remover")
         {
-            //
+            int idNo1;
+            int idNo2;
+            printText("quer fazer a remocao entre quais nos?");
+            printText("Digite id primeiro no");
+            cin >> idNo1;
+            printText("Digite id segundo no");
+            cin >> idNo2;
+            grafoUsado.removeAresta(idNo1,idNo2);
         }
         else
         {
-            //
+            int idNo1;
+            int idNo2;
+            printText("quer fazer a adicao entre quais nos?");
+            printText("Digite id primeiro no");
+            cin >> idNo1;
+            printText("Digite id segundo no");
+            cin >> idNo2;
+            grafoUsado.adicionaAresta(idNo1,idNo2);
         }
     }
     this->iniciate();
 }
 void Menu::letraC()
 {
-    printText("De qual nó se quer saber o grau? (Digite o id do nó)");
+    printText("De qual no se quer saber o grau? (Digite o id do no)");
     int id;
     cin >> id;
     int grau = grafoUsado.getGrauNo(id);
@@ -89,29 +111,29 @@ void Menu::letraD()
     cin >> k;
     if (grafoUsado.grafoEKRegular(k))
     {
-        cout << "É " << k << "-regular" << endl;
+        cout << "E " << k << "-regular" << endl;
     }
     else
     {
-        cout << "Não é " << k << "-regular" << endl;
+        cout << "Não e " << k << "-regular" << endl;
     }
     this->iniciate();
 }
 void Menu::letraE()
 {
     int ordem = grafoUsado.getOrdemGrafo();
-    cout << "O grafo é de ordem " <<ordem << endl;
+    cout << "O grafo e de ordem " <<ordem << endl;
     this->iniciate();
 }
 void Menu::letraF()
 {
     if(grafoUsado.grafoTrivial())
     {
-        printText("É trivial");
+        printText("E trivial");
     }
     else
     {
-        printText("Não é trivial");
+        printText("Não e trivial");
     }
     this->iniciate();
 }
@@ -119,17 +141,17 @@ void Menu::letraG()
 {
     if(grafoUsado.grafoNulo())
     {
-        printText("É nulo");
+        printText("E nulo");
     }
     else
     {
-        printText("Não é nulo");
+        printText("Não e nulo");
     }
     this->iniciate();
 }
 void Menu::letraH()
 {
-    printText("Qual nó se quer saber a vizinhança aberta? (Digite o id do nó)");
+    printText("Qual no se quer saber a vizinhanca aberta? (Digite o id do no)");
     int id;
     cin >> id;
     grafoUsado.mostrarVizinhacaAberta(id);
@@ -137,7 +159,7 @@ void Menu::letraH()
 }
 void Menu::letraI()
 {
-    printText("Qual nó se quer saber a vizinhança fechada? (Digite o id do nó)");
+    printText("Qual no se quer saber a vizinhanca fechada? (Digite o id do no)");
     int id;
     cin >> id;
     grafoUsado.mostrarVizinhacaFechada(id);
@@ -147,11 +169,11 @@ void Menu::letraJ()
 {
     if(grafoUsado.multigrafo())
     {
-        printText("É multigrafo");
+        printText("E multigrafo");
     }
     else
     {
-        printText("Não é multigrafo");
+        printText("Nao e multigrafo");
     }
     this->iniciate();
 }
@@ -159,11 +181,11 @@ void Menu::letraK()
 {
     if(grafoUsado.grafoCompleto())
     {
-        printText("É completo");
+        printText("E completo");
     }
     else
     {
-        printText("Não é completo");
+        printText("Nao e completo");
     }
     this->iniciate();
 }
@@ -171,11 +193,11 @@ void Menu::letraL()
 {
     if(grafoUsado.bipartido())
     {
-        printText("É bipartido");
+        printText("E bipartido");
     }
     else
     {
-        printText("Não é bipartido");
+        printText("Nao e bipartido");
     }
     this->iniciate();
 }
@@ -204,6 +226,7 @@ void Menu::iniciate(){
     printText("Digite 11 para checar se o grafo é completo");
     printText("Digite 12 para checar se o grafo é bipartido");
     printText("Digite 13 para imprimir a sequencia de grau do vertice");
+    printText("Digite 0 para finalizar programa");
     cout << "**------------------------**" << endl;
     while(num!= 0){
             cin >> num;
@@ -254,6 +277,7 @@ void Menu::iniciate(){
                 cout << "Opcao Invalida" << endl;
 
         }
+
     }
 }
 

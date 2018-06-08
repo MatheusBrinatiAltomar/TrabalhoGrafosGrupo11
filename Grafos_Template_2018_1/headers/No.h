@@ -29,6 +29,7 @@ class No{
         void removeAresta(int id, bool arco);
         float getAresta(int index);
         vector <Aresta> listaAresta;
+        bool eVizinho(int id);
 };
 
 #endif // NO_H_INCLUDED

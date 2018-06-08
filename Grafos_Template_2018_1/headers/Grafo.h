@@ -26,8 +26,10 @@ class Grafo{
         bool multigrafo();
         bool vizinho(int id1, int id2);
         bool grafoCompleto();
-        void removeAresta();
+        void removeAresta(int id1, int id2);
+        void adicionaAresta(int id1,int id2);
         bool bipartido();
+        bool tenta2ColorirGrafo(int id,int collorArr[]);
 };
 
 

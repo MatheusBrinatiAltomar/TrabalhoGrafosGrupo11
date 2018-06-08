@@ -85,6 +85,14 @@ float No::getPeso()
     listaAresta.push_back(a);
 }
 
+bool No::eVizinho(int id)
+{
+    for(vector <Aresta>::iterator it = listaAresta.begin(); it != listaAresta.end(); it++ ){
+        if(id == it->getIDNo() ){
+            return true;
+        }
+    }
+}
 
 
 void No::adicionaAresta(int id,float pesoA,bool arco)

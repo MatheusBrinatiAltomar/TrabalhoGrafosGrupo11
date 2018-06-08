@@ -133,6 +133,7 @@ void Grafo::readFile(string path)
                 }
 				count++;
 		}
+            cout << "Arquivo lido com sucesso" << endl;
     }
 	else {
 		cerr << "Couldn't open file!" << endl;
@@ -282,13 +283,88 @@ bool Grafo::grafoCompleto()
     return false;
 }
 
-void Grafo::removeAresta()
+void Grafo::removeAresta(int id1,int id2)
 {
+
+}
+
+void Grafo::adicionaAresta(int id1, int id2)
+{
+
+}
+
+bool Grafo::vizinho(int id1, int id2)
+{
+    for (std::vector<No>::iterator it = listaNos.begin(); it != listaNos.end(); ++it){
+        if(it->getID() == id1 ){
+            return it->eVizinho(id2);
+        }
+        if(it->getID() == id2 ){
+            return it->eVizinho(id1);
+        }
+    }
+    return false;
+}
+
+bool Grafo::tenta2ColorirGrafo(int id, int colorArr[] ){
+    colorArr[id] = 1;
+
+    //cria uma fila para realizar a bsuca em largura
+    queue <int> q;
+    q.push(id);
+
+
+    while (!q.empty())
+    {
+        //tira o primeiro elemento da fila
+        int u = q.front();
+        q.pop();
+
+        // Return false if there is a self-loop
+
+        if (vizinho(u,u))
+           return false;
+
+         // Find all non-colored adjacent vertices
+        for (int v = 1; v <= listaNos.size(); ++v)
+        {
+            // Se u e v são vizinhos e
+            // o n[o v não está colorido
+            if(vizinho(u,v) && colorArr[v] == -1)
+            {
+                // Assign alternate color to this
+                // adjacent v of u
+                colorArr[v] = 1 - colorArr[u];
+                q.push(v);
+            }
+
+            // Se u e v são vizinhos e
+            // o no v  está colorido com a mesma coir de u
+            else if(vizinho(u,v) && colorArr[v] == colorArr[u])
+                return false;
+        }
+    }
+
+
+    return true;
 
 }
 
 bool Grafo::bipartido()
 {
+    int V = listaNos.size();
+    int colorArr[V+1];
+    for (int i = 1; i <= V; ++i)
+        colorArr[i] = -1;
+
+    // O loop a seguir fara a busca em largura para verificar a bipartilidade
+    // o Algoritmo tenta colorir o grafo com 2 cores, se conseguir o grafo é bipartido.
+    for (int i = 1; i <= V; i++)
+      if (colorArr[i] == -1)
+        if (tenta2ColorirGrafo(i, colorArr) == false)
+           return false;
+
+     return true;
 
 }
 

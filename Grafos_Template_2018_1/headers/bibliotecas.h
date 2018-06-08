@@ -5,6 +5,9 @@
 #include <iostream>
 #include <string>
 #include <fstream>
+#include <locale>
+#include <queue>
+
 using namespace std;
 
 #include "Aresta.h"
