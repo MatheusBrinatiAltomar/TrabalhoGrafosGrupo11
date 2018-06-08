@@ -165,16 +165,17 @@
 	"../headers/bibliotecas.h"
 	<vector>
 
-1528469790 source:c:\users\hal\documents\github\trabalhografosgrupo11\grafos_template_2018_1\main.cpp
+1528492096 source:c:\users\hal\documents\github\trabalhografosgrupo11\grafos_template_2018_1\main.cpp
 	"headers/bibliotecas.h"
 
-1528468748 c:\users\hal\documents\github\trabalhografosgrupo11\grafos_template_2018_1\headers\bibliotecas.h
+1528491051 c:\users\hal\documents\github\trabalhografosgrupo11\grafos_template_2018_1\headers\bibliotecas.h
 	<vector>
 	<iostream>
 	<string>
 	<fstream>
 	<locale>
 	<queue>
+	<algorithm>
 	"Aresta.h"
 	"No.h"
 	"Grafo.h"
@@ -182,11 +183,11 @@
 
 1528427531 c:\users\hal\documents\github\trabalhografosgrupo11\grafos_template_2018_1\headers\aresta.h
 
-1528466598 c:\users\hal\documents\github\trabalhografosgrupo11\grafos_template_2018_1\headers\no.h
+1528493596 c:\users\hal\documents\github\trabalhografosgrupo11\grafos_template_2018_1\headers\no.h
 	"bibliotecas.h"
 	"Aresta.h"
 
-1528469569 c:\users\hal\documents\github\trabalhografosgrupo11\grafos_template_2018_1\headers\grafo.h
+1528493268 c:\users\hal\documents\github\trabalhografosgrupo11\grafos_template_2018_1\headers\grafo.h
 	"bibliotecas.h"
 
 1528462986 c:\users\hal\documents\github\trabalhografosgrupo11\grafos_template_2018_1\headers\menu.h
@@ -195,14 +196,14 @@
 1528427531 source:c:\users\hal\documents\github\trabalhografosgrupo11\grafos_template_2018_1\src\aresta.cpp
 	"../headers/bibliotecas.h"
 
-1528469700 source:c:\users\hal\documents\github\trabalhografosgrupo11\grafos_template_2018_1\src\grafo.cpp
+1528493476 source:c:\users\hal\documents\github\trabalhografosgrupo11\grafos_template_2018_1\src\grafo.cpp
 	"../headers/bibliotecas.h"
 	<vector>
 
-1528468952 source:c:\users\hal\documents\github\trabalhografosgrupo11\grafos_template_2018_1\src\menu.cpp
+1528493585 source:c:\users\hal\documents\github\trabalhografosgrupo11\grafos_template_2018_1\src\menu.cpp
 	"../headers/bibliotecas.h"
 
-1528467227 source:c:\users\hal\documents\github\trabalhografosgrupo11\grafos_template_2018_1\src\no.cpp
+1528493589 source:c:\users\hal\documents\github\trabalhografosgrupo11\grafos_template_2018_1\src\no.cpp
 	"../headers/bibliotecas.h"
 
 1528374382 source:/home/josecarvalho/git_workspace/TrabalhoGrafosGrupo11/Grafos_Template_2018_1/main.cpp

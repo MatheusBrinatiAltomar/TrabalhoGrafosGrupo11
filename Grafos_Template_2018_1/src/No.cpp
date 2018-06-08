@@ -66,7 +66,7 @@ float No::getAresta(int index){
     return listaAresta[index].getIDNo();
 }
 
-int No::getID()
+int No::getID ()
 {
     return iD;
 }

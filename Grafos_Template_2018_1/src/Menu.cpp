@@ -15,25 +15,13 @@ void Menu::printText(string texto){
 
 void Menu::letraA()
 {
-    string escolha;
-    printText("Quer ler ou escrever o grafo atual num arquivo?");
-    printText("Digite ler para ler arquivo");
-    printText("Digite escrever para escrever arquivo");
-    cin >> escolha;
-    if(escolha == "ler" ){
-        printText("Digite o endereco do arquivo");
-        string path;
-        cin >> path;
-        grafoUsado.readFile(path);
-        this->iniciate();
-    } else if(escolha == "escrever" ){
-        printText("Digite o endereco do arquivo");
+    printText("Digite o endereco do arquivo para salvar grafo");
         string path;
         cin >> path;
         grafoUsado.writeFile(path);
         this->iniciate();
     }
-}
+
 void Menu::letraB()
 {
     printText("Deseja fazer a operação com no ou com aresta?");
@@ -84,12 +72,15 @@ void Menu::letraB()
         {
             int idNo1;
             int idNo2;
+            float peso;
             printText("quer fazer a adicao entre quais nos?");
             printText("Digite id primeiro no");
             cin >> idNo1;
             printText("Digite id segundo no");
             cin >> idNo2;
-            grafoUsado.adicionaAresta(idNo1,idNo2);
+            printText("Digite peso da aresta");
+            cin >> peso;
+            grafoUsado.adicionaAresta(idNo1,idNo2,peso);
         }
     }
     this->iniciate();

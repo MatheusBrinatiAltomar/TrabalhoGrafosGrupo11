@@ -7,7 +7,7 @@
 #include <fstream>
 #include <locale>
 #include <queue>
-
+#include <algorithm>
 using namespace std;
 
 #include "Aresta.h"

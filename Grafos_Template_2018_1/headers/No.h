@@ -14,7 +14,7 @@ class No{
         No();
         No(int iD, int grau, int grauEntrada, int grauSaida, float pesoNo);
         ~No();
-        int getID();
+        int getID() ;
         int getGrau();
         int getGrauEntrada();
         int getGrauSaida();

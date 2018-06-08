@@ -92,16 +92,15 @@ bool Grafo::noEstaNoGrafo(int index)
 }
 
 
-void Grafo::readFile(string path)
+void Grafo::readFile(char **path)
 {
 	int m;
 	listaNos.reserve(m);
 	int count = 0;
 	ifstream f;
-	int i=0;
 	int id=0;
 	int id_destino;
-	f.open(path.c_str());
+	f.open(path[1]);
 	if (f.is_open()) {
 		f >> m;
 		while (true) {
@@ -117,29 +116,41 @@ void Grafo::readFile(string path)
                     id = value;
                     if(!noEstaNoGrafo(id)){ // Nó está mo grafo?
                         adcionarNo(id,0);
-                        i++;
                     }
                 }
                 else if (count == 1) {
                     id_destino = value;
+                    if(!noEstaNoGrafo(id_destino)){ // Nó está mo grafo?
+                        adcionarNo(id_destino,0);
+                    }
                 }
                 else if( count == 2){
                     for (std::vector<No>::iterator it = listaNos.begin(); it != listaNos.end(); ++it) {
                             if( it->getID() == id )
                                     it->adicionaAresta(id_destino,false,value);
+                            if( it->getID() == id_destino )
+                                    it->adicionaAresta(id,false,value);
                     }
+
 
                 }
                 }
 				count++;
 		}
             cout << "Arquivo lido com sucesso" << endl;
+
+
     }
 	else {
 		cerr << "Couldn't open file!" << endl;
 	}
 
 }
+
+
+
+
+
 
 int Grafo::getOrdemGrafo()
 {
@@ -199,12 +210,6 @@ void Grafo::mostrarVizinhacaAberta(int id)
                 cout << a->getIDNo() << endl;
          }
          // Percorre as outras arestas para saber os outros vizinhos do no procurado
-         for(std::vector<Aresta>::iterator a = listaNos[i].listaAresta.begin(); a != listaNos[i].listaAresta.end(); ++a){
-                if( a->getIDNo() == id) {
-                    cout << it->getID() << endl;
-                    break;
-                }
-          }
     }
 }
 
@@ -218,12 +223,6 @@ void Grafo::mostrarVizinhacaFechada(int id)
             for(std::vector<Aresta>::iterator a = listaNos[i].listaAresta.begin(); a != listaNos[i].listaAresta.end(); ++a)
                 cout << a->getIDNo() << endl;
          }
-         for(std::vector<Aresta>::iterator a = listaNos[i].listaAresta.begin(); a != listaNos[i].listaAresta.end(); ++a){
-                if( a->getIDNo() == id) {
-                    cout << it->getID() << endl;
-                    break;
-                }
-          }
     }
 
 
@@ -285,12 +284,37 @@ bool Grafo::grafoCompleto()
 
 void Grafo::removeAresta(int id1,int id2)
 {
+    if(noEstaNoGrafo(id1) && noEstaNoGrafo(id2)){
+        if(vizinho(id1,id2)){
+        for (std::vector<No>::iterator it = listaNos.begin(); it != listaNos.end(); ++it) {
+             if( it->getID() == id1 )
+                    it->removeAresta(id2,false);
+             if( it->getID() == id2)
+                    it->adicionaAresta(id1,false);
+        }
+           }
+
+    } else {
+         cout << "Nao e possivel remover aresta devido aos nos nao existirem" << endl;
+    }
 
 }
 
-void Grafo::adicionaAresta(int id1, int id2)
-{
 
+
+
+void Grafo::adicionaAresta(int id1, int id2, float peso)
+{
+    if(noEstaNoGrafo(id1) && noEstaNoGrafo(id2)){
+        for (std::vector<No>::iterator it = listaNos.begin(); it != listaNos.end(); ++it) {
+             if( it->getID() == id1 )
+                    it->adicionaAresta(id2,false,peso);
+             if( it->getID() == id2)
+                    it->adicionaAresta(id1,false,peso);
+        }
+    } else {
+        cout << "Nao e possivel adcionar aresta devido aos nos nao existirem" << endl;
+    }
 }
 
 bool Grafo::vizinho(int id1, int id2)
