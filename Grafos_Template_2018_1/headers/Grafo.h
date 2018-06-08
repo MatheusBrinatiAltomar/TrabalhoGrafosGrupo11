@@ -24,6 +24,8 @@ class Grafo{
         void mostrarVizinhacaAberta(int id);
         void mostrarVizinhacaFechada(int id);
         bool multigrafo();
+        bool vizinho(int id1, int id2);
+        bool grafoCompleto();
 };
 
 

@@ -254,3 +254,19 @@ bool Grafo::multigrafo()
     return false;
 }
 
+bool Grafo::grafoCompleto()
+{
+    if(multigrafo())
+        return false();
+
+    int N = getOrdemGrafo();
+    int num_arestas = 0;
+    for(int i = 0; i < N; i++) {
+        num_arestas += listaNos[i].getGrau();
+    }
+    if(num_arestas == N(N-1)) //seria N(N-1)/2, mas o num_arestas está sendo incrementado duas vezes a cada aresta
+        return true;
+    return false;
+}
+
+
