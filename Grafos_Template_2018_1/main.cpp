@@ -7,7 +7,7 @@ int main(){
     //menu.iniciate();
     Grafo grafo = Grafo();
     grafo.readFile("entrada.txt");
-    grafo.mostrarVizinhacaFechada(1);
+    grafo.mostrarVizinhacaAberta(3);
     grafo.writeFile("saida.txt");
     return 0;
 }

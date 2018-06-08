@@ -76,9 +76,7 @@ float No::getPeso()
     return pesoNo;
 }
 
- void No::adicionaAresta(int id, float pesoA)
-{
-    //cout << "asudh" << endl;
+ void No::adicionaAresta(int id, float pesoA){
     Aresta a =  Aresta(id,pesoA);
     if(id == iD)
         grau += 2;
@@ -102,6 +100,7 @@ void No::adicionaAresta(int id,float pesoA,bool arco)
     {
         grauSaida +=1;
     }
+    adicionaAresta(id,pesoA);
 }
 
 void No::removeAresta(int id, bool arco)

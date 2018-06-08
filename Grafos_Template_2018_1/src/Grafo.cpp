@@ -3,7 +3,7 @@
 
 Grafo::Grafo()
 {
-    vector <No> listaNos;
+
 }
 
 Grafo::~Grafo()
@@ -101,7 +101,6 @@ void Grafo::readFile(string path)
 	int i=0;
 	int id=0;
 	int id_destino;
-    Aresta *a;
 	f.open(path.c_str());
 	if (f.is_open()) {
 		f >> m;
@@ -127,14 +126,13 @@ void Grafo::readFile(string path)
                 else if( count == 2){
                     for (std::vector<No>::iterator it = listaNos.begin(); it != listaNos.end(); ++it) {
                             if( it->getID() == id )
-                                    it->adicionaAresta(id_destino,value);
+                                    it->adicionaAresta(id_destino,false,value);
                     }
 
                 }
                 }
 				count++;
 		}
-		showInfo();
     }
 	else {
 		cerr << "Couldn't open file!" << endl;
@@ -178,9 +176,9 @@ int Grafo::getGrauNo(int id)
          if( it->getID() == id )
                  return it->getGrau();
     }
+    return -1;
 }
 
-=======
 bool Grafo::grafoEKRegular(int k)
 {
     for (std::vector<No>::iterator it = listaNos.begin(); it != listaNos.end(); ++it) {
@@ -194,11 +192,18 @@ void Grafo::mostrarVizinhacaAberta(int id)
 {
     int i=0;
     for (std::vector<No>::iterator it = listaNos.begin(); it != listaNos.end(); ++it, i++) {
-         if( it->getID() == id )
+         if( it->getID() == id ) // vai na lista de adjacência do nó
          {
             for(std::vector<Aresta>::iterator a = listaNos[i].listaAresta.begin(); a != listaNos[i].listaAresta.end(); ++a)
                 cout << a->getIDNo() << endl;
          }
+         // Percorre as outras arestas para saber os outros vizinhos do no procurado
+         for(std::vector<Aresta>::iterator a = listaNos[i].listaAresta.begin(); a != listaNos[i].listaAresta.end(); ++a){
+                if( a->getIDNo() == id) {
+                    cout << it->getID() << endl;
+                    break;
+                }
+          }
     }
 }
 
@@ -212,6 +217,14 @@ void Grafo::mostrarVizinhacaFechada(int id)
             for(std::vector<Aresta>::iterator a = listaNos[i].listaAresta.begin(); a != listaNos[i].listaAresta.end(); ++a)
                 cout << a->getIDNo() << endl;
          }
+         for(std::vector<Aresta>::iterator a = listaNos[i].listaAresta.begin(); a != listaNos[i].listaAresta.end(); ++a){
+                if( a->getIDNo() == id) {
+                    cout << it->getID() << endl;
+                    break;
+                }
+          }
     }
+
+
 }
 
