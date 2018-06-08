@@ -14,6 +14,10 @@ Aresta::Aresta(int id,float pesoA)
     pesoAresta = pesoA;
 }
 
+Aresta::Aresta()
+{
+
+}
 
 Aresta::~Aresta()
 {

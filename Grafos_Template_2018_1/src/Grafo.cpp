@@ -180,7 +180,6 @@ int Grafo::getGrauNo(int id)
     }
 }
 
-=======
 bool Grafo::grafoEKRegular(int k)
 {
     for (std::vector<No>::iterator it = listaNos.begin(); it != listaNos.end(); ++it) {
@@ -230,7 +229,7 @@ bool Grafo::multigrafo()
         grau = no.getGrau();
         int *A = new int[grau];
         for(int j = 0; j < grau; j++) { // Para cada nó, analisar todas as arestas;
-            t = no.listaArestas[j];
+            t = no.listaAresta[j];
             if(t.getArco()) // Se alguma aresta for arco,
                 return false; // tem aresta direcionada
             idviz = t.getIDNo();
@@ -257,14 +256,14 @@ bool Grafo::multigrafo()
 bool Grafo::grafoCompleto()
 {
     if(multigrafo())
-        return false();
+        return false;
 
     int N = getOrdemGrafo();
     int num_arestas = 0;
     for(int i = 0; i < N; i++) {
         num_arestas += listaNos[i].getGrau();
     }
-    if(num_arestas == N(N-1)) //seria N(N-1)/2, mas o num_arestas está sendo incrementado duas vezes a cada aresta
+    if(num_arestas == N*(N-1)) //seria N(N-1)/2, mas o num_arestas está sendo incrementado duas vezes a cada aresta
         return true;
     return false;
 }
