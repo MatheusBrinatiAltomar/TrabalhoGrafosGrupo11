@@ -5,55 +5,184 @@ using namespace std;
 
 
 
-Menu::Menu()
+Menu::Menu(Grafo grafo)
 {
-
+    grafoUsado = grafo;
 }
 
 void Menu::printText(string texto){
     cout << texto << endl;
 }
 
-void Menu::letraA(){
-            printText("Digite o endereco do arquivo");
-            string path;
-            cin >> path;
+void Menu::letraA()
+{
+    printText("Digite o endereco do arquivo");
+    string path;
+    cin >> path;
+    grafoUsado.readFile(path);
+    printText("Arquivo lido com sucesso");
+    this->iniciate();
+}
+void Menu::letraB()
+{
+    printText("Deseja fazer a operação com nó ou com aresta?");
+    string resposta;
+    cin >> resposta;
+    if (resposta == "no")
+    {
+        printText("Deseja remover ou adicionar um no?");
+        string resposta2;
+        cin >> resposta2;
+        if (resposta2 == "remover")
+        {
+            printText("Qual o id do nó a ser retirado?");
+            int id;
+            cin >> id;
+            grafoUsado.removerNo(id);
+            printText("Nó removido com sucesso!");
         }
-void Menu::letraB(){
-            printText("A");
+        else
+        {
+            printText("Qual o id do nó a ser adicionado?");
+            int id;
+            cin >> id;
+            printText("Qual o peso do nó a ser adicionado?");
+            float peso;
+            cin >> peso;
+            grafoUsado.adcionarNo(id, peso);
+            printText("Nó adicionado com sucesso!");
         }
-void Menu::letraC(){
-            printText("A");
+    }
+    else
+    {
+        printText("A partir de qual nó se deseja fazer a operação? (digite o id do nó)");
+        int idNo;
+        cin >> idNo;
+        printText("Deseja remover ou adicionar uma aresta?");
+        string resposta2;
+        cin >> resposta2;
+        if (resposta2 == "remover")
+        {
+            //
         }
-void Menu::letraD(){
-            printText("A");
+        else
+        {
+            //
         }
-void Menu::letraE(){
-            printText("A");
-        }
-void Menu::letraF(){
-            printText("A");
+    }
+    this->iniciate();
 }
-void Menu::letraG(){
-            printText("A");
+void Menu::letraC()
+{
+    printText("De qual nó se quer saber o grau? (Digite o id do nó)");
+    int id;
+    cin >> id;
+    int grau = grafoUsado.getGrauNo(id);
+    //Fazer a verificação para digrafo
+    cout << "Grau: " << grau << endl;
+    this->iniciate();
 }
-void Menu::letraH(){
-            printText("A");
+void Menu::letraD()
+{
+    printText("Qual o K para se saber a K-regularidade?");
+    int k;
+    cin >> k;
+    if (grafoUsado.grafoEKRegular(k))
+    {
+        cout << "É " << k << "-regular" << endl;
+    }
+    else
+    {
+        cout << "Não é " << k << "-regular" << endl;
+    }
+    this->iniciate();
 }
-void Menu::letraI(){
-            printText("A");
+void Menu::letraE()
+{
+    int ordem = grafoUsado.getOrdemGrafo();
+    cout << "O grafo é de ordem " <<ordem << endl;
+    this->iniciate();
 }
-void Menu::letraJ(){
-            printText("A");
+void Menu::letraF()
+{
+    if(grafoUsado.grafoTrivial())
+    {
+        printText("É trivial");
+    }
+    else
+    {
+        printText("Não é trivial");
+    }
+    this->iniciate();
 }
-void Menu::letraK(){
-            printText("A");
+void Menu::letraG()
+{
+    if(grafoUsado.grafoNulo())
+    {
+        printText("É nulo");
+    }
+    else
+    {
+        printText("Não é nulo");
+    }
+    this->iniciate();
 }
-void Menu::letraL(){
-            printText("A");
+void Menu::letraH()
+{
+    printText("Qual nó se quer saber a vizinhança aberta? (Digite o id do nó)");
+    int id;
+    cin >> id;
+    grafoUsado.mostrarVizinhacaAberta(id);
+    this->iniciate();
 }
-void Menu::letraM(){
-            printText("A");
+void Menu::letraI()
+{
+    printText("Qual nó se quer saber a vizinhança fechada? (Digite o id do nó)");
+    int id;
+    cin >> id;
+    grafoUsado.mostrarVizinhacaFechada(id);
+    this->iniciate();
+}
+void Menu::letraJ()
+{
+    if(grafoUsado.multigrafo())
+    {
+        printText("É multigrafo");
+    }
+    else
+    {
+        printText("Não é multigrafo");
+    }
+    this->iniciate();
+}
+void Menu::letraK()
+{
+    if(grafoUsado.grafoCompleto())
+    {
+        printText("É completo");
+    }
+    else
+    {
+        printText("Não é completo");
+    }
+    this->iniciate();
+}
+void Menu::letraL()
+{
+    if(grafoUsado.bipartido())
+    {
+        printText("É bipartido");
+    }
+    else
+    {
+        printText("Não é bipartido");
+    }
+    this->iniciate();
+}
+void Menu::letraM()
+{
+    grafoUsado.printSequenciaGraus();
+    this->iniciate();
 }
 
 
@@ -63,7 +192,7 @@ void Menu::iniciate(){
     int num = 1;
     cout << "**------------------------**" << endl;
     printText("Digite 1 para ler arquivo");
-    printText("Digite 2 para add or excluir no");
+    printText("Digite 2 para add or excluir no ou aresta");
     printText("Digite 3 para retornar grau de um no");
     printText("Digite 4 para verificar a k-regularidade de um grafo");
     printText("Digite 5 para retornar a ordem de um grafo");

@@ -282,4 +282,14 @@ bool Grafo::grafoCompleto()
     return false;
 }
 
+void Grafo::removeAresta()
+{
+
+}
+
+bool Grafo::bipartido()
+{
+
+}
+
 

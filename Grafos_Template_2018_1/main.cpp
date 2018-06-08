@@ -3,12 +3,11 @@
 
 
 int main(){
-    Menu menu = Menu();
-    //menu.iniciate();
     Grafo grafo = Grafo();
-    grafo.readFile("entrada.txt");
-    grafo.mostrarVizinhacaAberta(3);
-    grafo.writeFile("saida.txt");
+    Menu menu = Menu(grafo);
+    menu.iniciate();
+    //grafo.mostrarVizinhacaAberta(3);
+    //grafo.writeFile("saida.txt");
     return 0;
 }
 

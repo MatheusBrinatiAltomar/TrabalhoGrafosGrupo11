@@ -89,41 +89,42 @@
 1527171691 source:c:\users\getcomp01\documents\trabalhografosgrupo11\grafos_template_2018_1\src\menu.cpp
 	"../headers/bibliotecas.h"
 
-1525783722 source:c:\users\mthal\desktop\matheus\quinto período\grafos\trabalhografosgrupo11\grafos_template_2018_1\main.cpp
+1528461988 source:c:\users\mthal\desktop\matheus\quinto período\grafos\trabalhografosgrupo11\grafos_template_2018_1\main.cpp
 	"headers/bibliotecas.h"
 
-1525783722 c:\users\mthal\desktop\matheus\quinto período\grafos\trabalhografosgrupo11\grafos_template_2018_1\headers\bibliotecas.h
+1528457941 c:\users\mthal\desktop\matheus\quinto período\grafos\trabalhografosgrupo11\grafos_template_2018_1\headers\bibliotecas.h
 	<vector>
 	<iostream>
 	<string>
+	<fstream>
 	"Aresta.h"
 	"No.h"
 	"Grafo.h"
 	"Menu.h"
 
-1527705323 c:\users\mthal\desktop\matheus\quinto período\grafos\trabalhografosgrupo11\grafos_template_2018_1\headers\aresta.h
+1528457941 c:\users\mthal\desktop\matheus\quinto período\grafos\trabalhografosgrupo11\grafos_template_2018_1\headers\aresta.h
 
-1528122622 c:\users\mthal\desktop\matheus\quinto período\grafos\trabalhografosgrupo11\grafos_template_2018_1\headers\no.h
+1528457941 c:\users\mthal\desktop\matheus\quinto período\grafos\trabalhografosgrupo11\grafos_template_2018_1\headers\no.h
 	"bibliotecas.h"
 	"Aresta.h"
 
-1527705323 c:\users\mthal\desktop\matheus\quinto período\grafos\trabalhografosgrupo11\grafos_template_2018_1\headers\grafo.h
+1528461387 c:\users\mthal\desktop\matheus\quinto período\grafos\trabalhografosgrupo11\grafos_template_2018_1\headers\grafo.h
 	"bibliotecas.h"
 
-1525783722 c:\users\mthal\desktop\matheus\quinto período\grafos\trabalhografosgrupo11\grafos_template_2018_1\headers\menu.h
+1528459398 c:\users\mthal\desktop\matheus\quinto período\grafos\trabalhografosgrupo11\grafos_template_2018_1\headers\menu.h
 	"bibliotecas.h"
 
-1525783723 source:c:\users\mthal\desktop\matheus\quinto período\grafos\trabalhografosgrupo11\grafos_template_2018_1\src\menu.cpp
+1528462178 source:c:\users\mthal\desktop\matheus\quinto período\grafos\trabalhografosgrupo11\grafos_template_2018_1\src\menu.cpp
 	"../headers/bibliotecas.h"
 
-1528120598 source:c:\users\mthal\desktop\matheus\quinto período\grafos\trabalhografosgrupo11\grafos_template_2018_1\src\aresta.cpp
+1528457942 source:c:\users\mthal\desktop\matheus\quinto período\grafos\trabalhografosgrupo11\grafos_template_2018_1\src\aresta.cpp
 	"../headers/bibliotecas.h"
 
-1528120184 source:c:\users\mthal\desktop\matheus\quinto período\grafos\trabalhografosgrupo11\grafos_template_2018_1\src\grafo.cpp
+1528461394 source:c:\users\mthal\desktop\matheus\quinto período\grafos\trabalhografosgrupo11\grafos_template_2018_1\src\grafo.cpp
 	"../headers/bibliotecas.h"
 	<vector>
 
-1528120546 source:c:\users\mthal\desktop\matheus\quinto período\grafos\trabalhografosgrupo11\grafos_template_2018_1\src\no.cpp
+1528457943 source:c:\users\mthal\desktop\matheus\quinto período\grafos\trabalhografosgrupo11\grafos_template_2018_1\src\no.cpp
 	"../headers/bibliotecas.h"
 
 1528154380 source:c:\users\vinic\documents\github\trabalhografosgrupo11\grafos_template_2018_1\main.cpp

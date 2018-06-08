@@ -4,8 +4,10 @@
 
 class Menu
 {
+    private:
+        Grafo grafoUsado;
     public:
-        Menu();
+        Menu(Grafo grafo);
         ~Menu();
         void printText(string texto);
         void iniciate();
