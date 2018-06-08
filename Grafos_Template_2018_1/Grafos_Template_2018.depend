@@ -202,3 +202,37 @@
 1528426191 source:c:\users\hal\documents\github\trabalhografosgrupo11\grafos_template_2018_1\src\no.cpp
 	"../headers/bibliotecas.h"
 
+1528374382 source:/home/josecarvalho/git_workspace/TrabalhoGrafosGrupo11/Grafos_Template_2018_1/main.cpp
+	"headers/bibliotecas.h"
+
+1528374382 /home/josecarvalho/git_workspace/TrabalhoGrafosGrupo11/Grafos_Template_2018_1/headers/bibliotecas.h
+	<vector>
+	<iostream>
+	<string>
+	<fstream>
+	"Aresta.h"
+	"No.h"
+	"Grafo.h"
+	"Menu.h"
+
+1528425582 /home/josecarvalho/git_workspace/TrabalhoGrafosGrupo11/Grafos_Template_2018_1/headers/Aresta.h
+
+1528374382 /home/josecarvalho/git_workspace/TrabalhoGrafosGrupo11/Grafos_Template_2018_1/headers/No.h
+	"bibliotecas.h"
+	"Aresta.h"
+
+1528420979 /home/josecarvalho/git_workspace/TrabalhoGrafosGrupo11/Grafos_Template_2018_1/headers/Grafo.h
+	"bibliotecas.h"
+
+1528374284 /home/josecarvalho/git_workspace/TrabalhoGrafosGrupo11/Grafos_Template_2018_1/headers/Menu.h
+	"bibliotecas.h"
+
+1528425595 source:/home/josecarvalho/git_workspace/TrabalhoGrafosGrupo11/Grafos_Template_2018_1/src/Aresta.cpp
+	"../headers/bibliotecas.h"
+
+1528374382 source:/home/josecarvalho/git_workspace/TrabalhoGrafosGrupo11/Grafos_Template_2018_1/src/Menu.cpp
+	"../headers/bibliotecas.h"
+
+1528374382 source:/home/josecarvalho/git_workspace/TrabalhoGrafosGrupo11/Grafos_Template_2018_1/src/No.cpp
+	"../headers/bibliotecas.h"
+

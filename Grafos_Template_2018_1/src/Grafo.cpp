@@ -228,3 +228,58 @@ void Grafo::mostrarVizinhacaFechada(int id)
 
 }
 
+bool Grafo::multigrafo()
+{
+    // verifica se o grafo é um multigrafo;
+
+    int ord = getOrdemGrafo();
+    int grau, id, idviz;
+    No no = No();
+    Aresta t = Aresta();
+
+    for(int i = 0; i < ord; i++) {
+        no = listaNos[i];
+        id = no.getID();
+        grau = no.getGrau();
+        int *A = new int[grau];
+        for(int j = 0; j < grau; j++) { // Para cada nó, analisar todas as arestas;
+            t = no.listaAresta[j];
+            if(t.getArco()) // Se alguma aresta for arco,
+                return false; // tem aresta direcionada
+            idviz = t.getIDNo();
+            if(idviz == id) // Se alguma aresta tiver id igual ao do no em questão,
+                return false; // é self-loop
+            for(int k = j-1; k >= 0; k--) {
+                if(A[k] == idviz) {
+                    // Se o vetor A tem elementos repetidos,
+                    // existe mais de uma aresta ligando os mesmos nós (multiarestas);
+                    return true; // tem multiaresta
+                }
+            }
+            // Se não, fazer o mesmo para o próximo nó da lista;
+            A[j] = idviz; // Armazena os ids das arestas em um vetor A;
+        }
+        delete A;
+    }
+    // Ao final da lista, se todos os nós forem verificados,
+    // siginifica que não existem multiarestas. O grafo não é
+    // multigrafo.
+    return false;
+}
+
+bool Grafo::grafoCompleto()
+{
+    if(multigrafo())
+        return false;
+
+    int N = getOrdemGrafo();
+    int num_arestas = 0;
+    for(int i = 0; i < N; i++) {
+        num_arestas += listaNos[i].getGrau();
+    }
+    if(num_arestas == N*(N-1)) //seria N(N-1)/2, mas o num_arestas está sendo incrementado duas vezes a cada aresta
+        return true;
+    return false;
+}
+
+

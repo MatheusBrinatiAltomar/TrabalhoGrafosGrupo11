@@ -7,6 +7,7 @@ class Aresta{
         int iD_No;
         bool arco;
     public:
+        Aresta();
         Aresta(int iD_No,float pesoA);
         Aresta(int iD_No,bool arc,float pesoA);
         ~Aresta();
