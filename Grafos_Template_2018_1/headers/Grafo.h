@@ -33,6 +33,7 @@ class Grafo{
         bool bipartido();
         bool tenta2ColorirGrafo(int id,int collorArr[]);
         bool existeAresta(int id1, int id2);
+        void acharCliqueMaxima1();
 };
 
 

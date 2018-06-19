@@ -392,4 +392,25 @@ bool Grafo::bipartido()
 
 }
 
+void Grafo::acharCliqueMaxima1()
+{
+    sort(listaNos.begin(),listaNos.end()); // Ordena nós pelo grau com base no operator < definido em No.h
+    vector <No> nosNaSolucao;
+    nosNaSolucao.push_back(*listaNos.begin());
+    for(vector <No>::iterator it = (listaNos.begin() + 1); it != listaNos.end() ; it++ ){
+        bool e_vizinho = true;
+        for(vector <No>::iterator n = nosNaSolucao.begin(); n != nosNaSolucao.end() ; n++)
+            if(!vizinho(it->getID(),n->getID())){
+                e_vizinho = false;
+                break;
+            }
+            if(e_vizinho){
+                nosNaSolucao.push_back(*it);
+            }
+        }
+    for(vector <No>::iterator n = nosNaSolucao.begin(); n != nosNaSolucao.end() ; n++)
+        cout << n->getID() << endl;
+
+}
+
 

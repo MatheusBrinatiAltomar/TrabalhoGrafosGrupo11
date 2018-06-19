@@ -30,6 +30,10 @@ class No{
         float getAresta(int index);
         vector <Aresta> listaAresta;
         bool eVizinho(int id);
+        bool operator<(const  No & other) //(1)
+        {
+            return grau > other.grau;
+        }
 };
 
 #endif // NO_H_INCLUDED
