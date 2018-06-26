@@ -394,6 +394,7 @@ bool Grafo::bipartido()
 
 void Grafo::acharCliqueMaxima1()
 {
+
     sort(listaNos.begin(),listaNos.end()); // Ordena nós pelo grau com base no operator < definido em No.h
     vector <No> nosNaSolucao;
     nosNaSolucao.push_back(*listaNos.begin());
@@ -413,4 +414,51 @@ void Grafo::acharCliqueMaxima1()
 
 }
 
+void Grafo::acharCliqueMaxima(float alfa, int maxIteracoes)
+{
+    srand(time(0)); // Inicia semente de randomização
+    sort(listaNos.begin(),listaNos.end()); // Ordena nós pelo grau com base no operator < definido em No.h
+    vector <No> currentSolution; // Para guardar a solução correspondente a cada iteração
+    vector <No> bestSolution; // Para guardar a melhor solução
+    vector <No> listaCandidatos; // Para guardar os nós candidatos
+    int aux = 0; // var auxiliar para calcularmos o indice aleatório da lista de Candidatos
+    int i = 0, j =0;
+    while(i < maxIteracoes) {
+        listaCandidatos = listaNos;
+        bool e_vizinho = true;
+        while(listaCandidatos.size() > 0){
+            aux = listaNos.size() * alfa;
+            j = rand() % aux;
+            if(formaClique(currentSolution,listaCandidatos[j]))
+                currentSolution.push_back(listaCandidatos[j]);
+            listaCandidatos.erase(listaCandidatos.begin() + j);
+        }
+        if(currentSolution.size() > bestSolution.size()){
+           bestSolution = currentSolution;
+        }
+        currentSolution.clear();
+        i++;
+     }
+}
 
+bool Grafo::formaClique(vector<No>nosNaSolucao, No noCandidato)
+{
+     for(vector <No>::iterator n = nosNaSolucao.begin(); n != nosNaSolucao.end() ; n++)
+            if(!vizinho(n->getID(),noCandidato.getID())){
+                return false;
+            }
+     return true;
+
+}
+
+
+bool Grafo::verificaSolucao(vector<No> nosNaSolucao)
+{
+    for(int i=0;i<nosNaSolucao.size();i++)
+        for(int j=i+1;j<nosNaSolucao.size();j++){
+            if(!vizinho(i,j)){
+                return false;
+            }
+    }
+    return true;
+}

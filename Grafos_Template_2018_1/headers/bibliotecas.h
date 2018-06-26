@@ -8,6 +8,8 @@
 #include <locale>
 #include <queue>
 #include <algorithm>
+#include <cstdio>
+#include <ctime>
 using namespace std;
 
 #include "Aresta.h"
