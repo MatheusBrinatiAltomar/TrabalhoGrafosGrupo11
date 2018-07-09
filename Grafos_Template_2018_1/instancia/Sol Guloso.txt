@@ -1,0 +1,80 @@
+
+Grandes
+
+Keller6
+N Nos: 3361
+N Arestas: 4.619.898
+Solucao: 36
+Best Solution: 69
+Time: 532.784s
+
+p_hat1500-3
+N Nos: 1500
+N arestas: 847.244
+Solucao Encontrada: 75
+Best: 94
+Time: 50.862s
+
+
+C4000.5
+N Nos: 4000
+N arestas: 4000268	
+Solucao Encontrada: ?
+Best: 18
+Time: ? s
+
+-----------------------------------------------
+
+Médias
+
+hamming10-4.clq
+
+N Nos: 1024
+N arestas: 434176
+Solucao Encontrada: ?
+Best: 40
+Time: ? s
+
+p_hat700-3.clq 
+
+N Nos: 700
+N arestas: 183010	
+Solucao Encontrada: ?
+Best: 62
+Time: ? s
+
+
+MANN_a45.clq.b
+
+N Nos: 1035 
+N arestas: 533115
+Solucao Encontrada: ?
+Best: 345
+Time: ? s
+
+----------------------------------------------
+
+Pequenas:
+
+brock200_2
+N Nos: 200
+N arestas: 9.876
+Solucao Encontrada: 7
+Best: 12
+Time: 0.342
+
+brock400b
+N Nos: 400
+N arestas: 59.765
+Solucao Encontrada: 18
+Best: 33
+Time: 1.535s
+
+phat300-1
+N nos: 300
+N arestas: 10.933
+Solucao Encontrada: 7
+Best: 8
+Time: 0.354s
+
+------------------------------------
