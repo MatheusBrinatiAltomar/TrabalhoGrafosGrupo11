@@ -13,6 +13,7 @@ class Grafo{
         void adcionarNo(int  id,float pesoNo);
         void removerNo(int id);
         void readFile(char **path);
+        void readFile2(string path);
         void writeFile(string path);
         void showInfo();
         bool noEstaNoGrafo(int index);

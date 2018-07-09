@@ -8,6 +8,14 @@ Solucao: 36
 Best Solution: 69
 Time: 532.784s
 
+
+mann_a81
+N Nos:  3321
+N Arestas:  5.506.380 edges
+Solucao: 1080
+Best Solution: 1100
+Time: 557.943 s
+
 p_hat1500-3
 N Nos: 1500
 N arestas: 847.244
@@ -19,38 +27,38 @@ Time: 50.862s
 C4000.5
 N Nos: 4000
 N arestas: 4000268	
-Solucao Encontrada: ?
+Solucao Encontrada: 12
 Best: 18
-Time: ? s
+Time: 403.995 s
 
 -----------------------------------------------
 
 Médias
 
-hamming10-4.clq
+hamming10-4
 
 N Nos: 1024
 N arestas: 434176
-Solucao Encontrada: ?
+Solucao Encontrada: 32
 Best: 40
-Time: ? s
+Time: 14.18 s
 
-p_hat700-3.clq 
+p_hat700-3
 
 N Nos: 700
 N arestas: 183010	
-Solucao Encontrada: ?
+Solucao Encontrada: 55  s
 Best: 62
-Time: ? s
+Time: 4.618  s
 
 
 MANN_a45.clq.b
 
 N Nos: 1035 
 N arestas: 533115
-Solucao Encontrada: ?
+Solucao Encontrada: 331
 Best: 345
-Time: ? s
+Time: 20.053 s
 
 ----------------------------------------------
 
