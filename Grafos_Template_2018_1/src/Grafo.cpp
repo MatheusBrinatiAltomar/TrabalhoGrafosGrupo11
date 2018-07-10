@@ -114,13 +114,13 @@ void Grafo::readFile(char **path)
             else {
                 if (count == 0) {
                     id = value;
-                    if(!noEstaNoGrafo(id)){ // NÛ est· mo grafo?
+                    if(!noEstaNoGrafo(id)){ // N√≥ est√° mo grafo?
                         adcionarNo(id,0);
                     }
                 }
                 else if (count == 1) {
                     id_destino = value;
-                    if(!noEstaNoGrafo(id_destino)){ // NÛ est· mo grafo?
+                    if(!noEstaNoGrafo(id_destino)){ // N√≥ est√° mo grafo?
                         adcionarNo(id_destino,0);
                     }
                 }
@@ -147,7 +147,59 @@ void Grafo::readFile(char **path)
 
 }
 
+void Grafo::readFile2(string path)
+{
+	int m,n;
+	int count = 0;
+	ifstream f;
+	int id=0;
+	int id_destino;
+	f.open(path);
+	if (f.is_open()) {
+		f >> m;
+		f >> n;
+		while (true) {
+			double value;
+			string aux;
+			if(count > 2)
+                count = 0;
+            if (count == 0) {
+                    if (!(f >> aux)) {
+                            break;
+                    }
+                }
+                else if (  count == 1) {
+                    if (!(f >> value)) {
+                            break;
+                    }
+                    id = value;
+                    if(!noEstaNoGrafo(id)){ // NÔøΩ estÔøΩ mo grafo?
+                        adcionarNo(id,0);
+                    }
+                }
+                else if(count == 2){
+                    if (!(f >> value)) {
+                            break;
+                    }
+                    id_destino = value;
+                    if(!noEstaNoGrafo(id_destino)){ // NÔøΩ estÔøΩ mo grafo?
+                        adcionarNo(id_destino,0);
+                    }
+                    for (std::vector<No>::iterator it = listaNos.begin(); it != listaNos.end(); ++it) {
+                            if( it->getID() == id )
+                                    it->adicionaAresta(id_destino,false,0);
+                            if( it->getID() == id_destino )
+                                    it->adicionaAresta(id,false,0);
+                    }
+                }
+				count++;
+		}
+		 cout << "Arquivo lido com sucesso" << endl;
+		} else {
+            cerr << "Couldn't open file!" << endl;
+        }
 
+}
 
 
 
@@ -204,7 +256,7 @@ void Grafo::mostrarVizinhacaAberta(int id)
 {
     int i=0;
     for (std::vector<No>::iterator it = listaNos.begin(); it != listaNos.end(); ++it, i++) {
-         if( it->getID() == id ) // vai na lista de adjacÍncia do nÛ
+         if( it->getID() == id ) // vai na lista de adjac√™ncia do n√≥
          {
             for(std::vector<Aresta>::iterator a = listaNos[i].listaAresta.begin(); a != listaNos[i].listaAresta.end(); ++a)
                 cout << a->getIDNo() << endl;
@@ -230,7 +282,7 @@ void Grafo::mostrarVizinhacaFechada(int id)
 
 bool Grafo::multigrafo()
 {
-    // verifica se o grafo È um multigrafo;
+    // verifica se o grafo √© um multigrafo;
 
     int ord = getOrdemGrafo();
     int grau, id, idviz;
@@ -242,27 +294,27 @@ bool Grafo::multigrafo()
         id = no.getID();
         grau = no.getGrau();
         int *A = new int[grau];
-        for(int j = 0; j < grau; j++) { // Para cada nÛ, analisar todas as arestas;
+        for(int j = 0; j < grau; j++) { // Para cada n√≥, analisar todas as arestas;
             t = no.listaAresta[j];
             if(t.getArco()) // Se alguma aresta for arco,
                 return false; // tem aresta direcionada
             idviz = t.getIDNo();
-            if(idviz == id) // Se alguma aresta tiver id igual ao do no em quest„o,
-                return false; // È self-loop
+            if(idviz == id) // Se alguma aresta tiver id igual ao do no em quest√£o,
+                return false; // √© self-loop
             for(int k = j-1; k >= 0; k--) {
                 if(A[k] == idviz) {
                     // Se o vetor A tem elementos repetidos,
-                    // existe mais de uma aresta ligando os mesmos nÛs (multiarestas);
+                    // existe mais de uma aresta ligando os mesmos n√≥s (multiarestas);
                     return true; // tem multiaresta
                 }
             }
-            // Se n„o, fazer o mesmo para o prÛximo nÛ da lista;
+            // Se n√£o, fazer o mesmo para o pr√≥ximo n√≥ da lista;
             A[j] = idviz; // Armazena os ids das arestas em um vetor A;
         }
         delete A;
     }
-    // Ao final da lista, se todos os nÛs forem verificados,
-    // siginifica que n„o existem multiarestas. O grafo n„o È
+    // Ao final da lista, se todos os n√≥s forem verificados,
+    // siginifica que n√£o existem multiarestas. O grafo n√£o √©
     // multigrafo.
     return false;
 }
@@ -277,7 +329,7 @@ bool Grafo::grafoCompleto()
     for(int i = 0; i < N; i++) {
         num_arestas += listaNos[i].getGrau();
     }
-    if(num_arestas == N*(N-1)) //seria N(N-1)/2, mas o num_arestas est· sendo incrementado duas vezes a cada aresta
+    if(num_arestas == N*(N-1)) //seria N(N-1)/2, mas o num_arestas est√° sendo incrementado duas vezes a cada aresta
         return true;
     return false;
 }
@@ -352,8 +404,8 @@ bool Grafo::tenta2ColorirGrafo(int id, int colorArr[] ){
          // Find all non-colored adjacent vertices
         for (int v = 1; v <= listaNos.size(); ++v)
         {
-            // Se u e v s„o vizinhos e
-            // o n[o v n„o est· colorido
+            // Se u e v s√£o vizinhos e
+            // o n[o v n√£o est√° colorido
             if(vizinho(u,v) && colorArr[v] == -1)
             {
                 // Assign alternate color to this
@@ -362,8 +414,8 @@ bool Grafo::tenta2ColorirGrafo(int id, int colorArr[] ){
                 q.push(v);
             }
 
-            // Se u e v s„o vizinhos e
-            // o no v  est· colorido com a mesma coir de u
+            // Se u e v s√£o vizinhos e
+            // o no v  est√° colorido com a mesma coir de u
             else if(vizinho(u,v) && colorArr[v] == colorArr[u])
                 return false;
         }
@@ -382,7 +434,7 @@ bool Grafo::bipartido()
         colorArr[i] = -1;
 
     // O loop a seguir fara a busca em largura para verificar a bipartilidade
-    // o Algoritmo tenta colorir o grafo com 2 cores, se conseguir o grafo È bipartido.
+    // o Algoritmo tenta colorir o grafo com 2 cores, se conseguir o grafo √© bipartido.
     for (int i = 1; i <= V; i++)
       if (colorArr[i] == -1)
         if (tenta2ColorirGrafo(i, colorArr) == false)
@@ -395,7 +447,7 @@ bool Grafo::bipartido()
 void Grafo::acharCliqueMaxima1()
 {
 
-    sort(listaNos.begin(),listaNos.end()); // Ordena nÛs pelo grau com base no operator < definido em No.h
+    sort(listaNos.begin(),listaNos.end()); // Ordena n√≥s pelo grau com base no operator < definido em No.h
     vector <No> nosNaSolucao;
     nosNaSolucao.push_back(*listaNos.begin());
     for(vector <No>::iterator it = (listaNos.begin() + 1); it != listaNos.end() ; it++ ){
@@ -409,29 +461,46 @@ void Grafo::acharCliqueMaxima1()
                 nosNaSolucao.push_back(*it);
             }
         }
-    for(vector <No>::iterator n = nosNaSolucao.begin(); n != nosNaSolucao.end() ; n++)
-        cout << n->getID() << endl;
+
+       cout << nosNaSolucao.size() << endl;
 
 }
 
 void Grafo::acharCliqueMaxima(float alfa, int maxIteracoes)
 {
-    srand(time(0)); // Inicia semente de randomizaÁ„o
-    sort(listaNos.begin(),listaNos.end()); // Ordena nÛs pelo grau com base no operator < definido em No.h
-    vector <No> currentSolution; // Para guardar a soluÁ„o correspondente a cada iteraÁ„o
-    vector <No> bestSolution; // Para guardar a melhor soluÁ„o
-    vector <No> listaCandidatos; // Para guardar os nÛs candidatos
-    int aux = 0; // var auxiliar para calcularmos o indice aleatÛrio da lista de Candidatos
+    srand(time(0)); // Inicia semente de randomiza√ß√£o
+    sort(listaNos.begin(),listaNos.end()); // Ordena n√≥s pelo grau com base no operator < definido em No.h
+    vector <No> currentSolution; // Para guardar a solu√ß√£o correspondente a cada itera√ß√£o
+    vector <No> bestSolution; // Para guardar a melhor solu√ß√£o
+    vector <No> listaCandidatos; // Para guardar os n√≥s candidatos
+    int aux = 0; // var auxiliar para calcularmos o indice aleat√≥rio da lista de Candidatos
     int i = 0, j =0;
     while(i < maxIteracoes) {
-        listaCandidatos = listaNos;
+    listaCandidatos = listaNos;
         bool e_vizinho = true;
+        cout << "a";
         while(listaCandidatos.size() > 0){
-            aux = listaNos.size() * alfa;
+
+            aux = listaCandidatos.size() * alfa;
+
             j = rand() % aux;
-            if(formaClique(currentSolution,listaCandidatos[j]))
-                currentSolution.push_back(listaCandidatos[j]);
-            listaCandidatos.erase(listaCandidatos.begin() + j);
+            std::swap(listaCandidatos[j], listaCandidatos.back());
+            if(formaClique(currentSolution,listaCandidatos.back() ))
+                currentSolution.push_back(listaCandidatos.back());
+            listaCandidatos.pop_back();
+            cout << "J:" << j  << endl;
+            cout << listaCandidatos.size() << endl;
+
+           // cout << "J:" << j  << endl;
+           // cout << listaCandidatos.size() << endl;
+
+
+
+
+         //   listaCandidatos.erase(listaCandidatos.begin() + j);
+
+
+
         }
         if(currentSolution.size() > bestSolution.size()){
            bestSolution = currentSolution;
