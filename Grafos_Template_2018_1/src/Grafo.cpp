@@ -475,39 +475,34 @@ void Grafo::acharCliqueMaxima(float alfa, int maxIteracoes)
     vector <No> listaCandidatos; // Para guardar os nós candidatos
     int aux = 0; // var auxiliar para calcularmos o indice aleatório da lista de Candidatos
     int i = 0, j =0;
+
+    bestSolution.push_back(listaNos[0]);
+
     while(i < maxIteracoes) {
     listaCandidatos = listaNos;
         bool e_vizinho = true;
-        cout << "a";
+
         while(listaCandidatos.size() > 0){
 
-            aux = listaCandidatos.size() * alfa;
+            aux = (int)ceil(listaCandidatos.size() * alfa);
 
             j = rand() % aux;
-            std::swap(listaCandidatos[j], listaCandidatos.back());
-            if(formaClique(currentSolution,listaCandidatos.back() ))
-                currentSolution.push_back(listaCandidatos.back());
-            listaCandidatos.pop_back();
-            cout << "J:" << j  << endl;
-            cout << listaCandidatos.size() << endl;
 
-           // cout << "J:" << j  << endl;
-           // cout << listaCandidatos.size() << endl;
+            if(formaClique(currentSolution,listaCandidatos[j] ))
+                currentSolution.push_back(listaCandidatos[j]);
 
-
-
-
-         //   listaCandidatos.erase(listaCandidatos.begin() + j);
-
-
+           listaCandidatos.erase(listaCandidatos.begin() + j);
 
         }
+
         if(currentSolution.size() > bestSolution.size()){
+
            bestSolution = currentSolution;
         }
         currentSolution.clear();
         i++;
      }
+     cout << bestSolution.size();
 }
 
 bool Grafo::formaClique(vector<No>nosNaSolucao, No noCandidato)
