@@ -34,6 +34,7 @@ class Grafo{
         bool tenta2ColorirGrafo(int id,int collorArr[]);
         void acharCliqueMaxima1();
         void acharCliqueMaxima(float alfa,int maxIteracoes);
+        void gulosoRandomizadoReativo(int alfaRR, int betaRR, int gammaRR, int itTotal);
         bool formaClique(vector <No> nosNaSolucao, No noCandidato);
         bool verificaSolucao(vector <No> nosNaSolucao);
 };

@@ -10,6 +10,7 @@
 #include <algorithm>
 #include <cstdio>
 #include <ctime>
+#include <math.h>
 using namespace std;
 
 #include "Aresta.h"

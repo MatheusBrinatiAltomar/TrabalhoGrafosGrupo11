@@ -154,10 +154,12 @@ void Grafo::readFile2(string path)
 	ifstream f;
 	int id=0;
 	int id_destino;
-	f.open(path);
+	f.open(path.c_str());
 	if (f.is_open()) {
 		f >> m;
 		f >> n;
+		for(int i = 1; i <= m; i++)
+            adcionarNo(i,0);
 		while (true) {
 			double value;
 			string aux;
@@ -173,18 +175,12 @@ void Grafo::readFile2(string path)
                             break;
                     }
                     id = value;
-                    if(!noEstaNoGrafo(id)){ // N� est� mo grafo?
-                        adcionarNo(id,0);
                     }
-                }
                 else if(count == 2){
                     if (!(f >> value)) {
                             break;
                     }
                     id_destino = value;
-                    if(!noEstaNoGrafo(id_destino)){ // N� est� mo grafo?
-                        adcionarNo(id_destino,0);
-                    }
                     for (std::vector<No>::iterator it = listaNos.begin(); it != listaNos.end(); ++it) {
                             if( it->getID() == id )
                                     it->adicionaAresta(id_destino,false,0);
@@ -195,7 +191,8 @@ void Grafo::readFile2(string path)
 				count++;
 		}
 		 cout << "Arquivo lido com sucesso" << endl;
-		} else {
+        }
+        else {
             cerr << "Couldn't open file!" << endl;
         }
 
@@ -502,7 +499,7 @@ void Grafo::acharCliqueMaxima(float alfa, int maxIteracoes)
         currentSolution.clear();
         i++;
      }
-     cout << bestSolution.size();
+     cout << bestSolution.size() << endl;
 }
 
 bool Grafo::formaClique(vector<No>nosNaSolucao, No noCandidato)
@@ -525,4 +522,67 @@ bool Grafo::verificaSolucao(vector<No> nosNaSolucao)
             }
     }
     return true;
+}
+
+//Algoritmo Guloso Randomizado Reativo
+void Grafo::gulosoRandomizadoReativo(int alfaRR, int betaRR, int gammaRR, int itTotal)
+{
+    double **alfas = new double*[alfaRR]; //Alocando o vetor dos alfas
+
+    //Criando os alfas baseado na quantidade passada (alfaRR)
+    for(int i = 0; i < alfaRR; i++){
+        alfas[i] = new double[4];
+        alfas[i][0] = (1.0/alfaRR) * (i + 1.0);
+        alfas[i][1] = 1.0/alfaRR;               //
+        alfas[i][2] = 0;                        //Somas das interferencias
+        alfas[i][3] = 0;                        //Quantidade de execuções
+    }
+
+    int a, sum, ind = 0;
+    //Executando cada iteração
+    for(int it = 0; it < itTotal; it++){
+        a = 0;
+        sum = 0;
+        if((it + 1) % gammaRR == 0 && it != 0){ // Atualizando as probabilidades a cada gammaRR
+            for(int i = 0; i < alfaRR; i++){
+                double qi, qj = 0;
+                if(alfas[i][3] != 0){
+                    qi = (sumMenorInterferencia/(alfas[i][2]/alfas[i][3]));
+                    for(int j = 0; j < alfaRR; j++){
+                        if(alfas[j][3] != 0)
+                            qj += (sumMenorInterferencia/(alfas[j][2]/alfas[j][3]));
+                    }
+                }
+                else{
+                    qi = 0;
+                    qj = 1;
+                }
+
+                alfas[i][1] = qi / (double)qj;
+            }
+        }
+
+        if((it + 1) % betaRR == 0 || it == 0){ // Selecionando qual alfa usar a cada betaRR
+            a = rand() % (101);
+            sum = 0;
+            for(int j = 0; j < alfaRR; j++){
+                sum += (alfas[j][1] * 100);
+                if(sum >= a){
+                    ind = j;
+                    break;
+                }
+            }
+        }
+
+        //Executando o Guloso Randomizado com o Alfa escolhido
+        float cost = acharCliqueMaxima(alfas[ind][0],1);
+        alfas[ind][2] += cost;
+        alfas[ind][3]++;
+    }
+
+    cout << "Informacoes dos alfas: \n";
+    cout << "[id] [Valor do Alfa] [Probabilidade Escolha] [Somatorio de Custos das Execucoes] [Quantidade de Execucoes]\n";
+    for(int i = 0; i < alfaRR; i++){
+        cout << i + 1 << " [" << alfas[i][0] << "] [" << alfas[i][1] << "] [" << alfas[i][2] << "] [" << alfas[i][3] << "]\n";
+    }
 }
