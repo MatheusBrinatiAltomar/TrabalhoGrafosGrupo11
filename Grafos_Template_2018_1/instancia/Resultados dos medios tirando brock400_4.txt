@@ -1,0 +1,505 @@
+Arquivo lido com sucesso
+Arquivo lido com sucesso
+Arquivo lido com sucesso
+DSJC500_5 guloso :
+10
+DSJC500_5 randomizado alfa 0.1
+12
+12
+12
+12
+13
+12
+12
+12
+12
+12
+DSJC500_5 randomizado alfa 0.2
+12
+13
+12
+13
+12
+12
+12
+12
+12
+12
+DSJC500_5 randomizado alfa 0.3
+12
+12
+12
+12
+11
+12
+13
+12
+12
+12
+DSJC500_5 randomizado reativo:
+Informacoes dos alfas:
+[id] [Valor do Alfa] [Probabilidade Escolha] [Somatorio de Custos das Execucoes] [Quantidade de Execucoes]
+1 [0.1] [0.102915] [3524] [381]
+2 [0.2] [0.102203] [1883] [205]
+3 [0.3] [0.101763] [3073] [336]
+4 [0.4] [0.101697] [1764] [193]
+5 [0.5] [0.100293] [3308] [367]
+6 [0.6] [0.099633] [2158] [241]
+7 [0.7] [0.0994033] [3100] [347]
+8 [0.8] [0.0979005] [2622] [298]
+9 [0.9] [0.0976046] [2386] [272]
+10 [1] [0.0965864] [3125] [360]
+Melhor clique: 12  Probilidade do melhor alfa: 0.102915
+Informacoes dos alfas:
+[id] [Valor do Alfa] [Probabilidade Escolha] [Somatorio de Custos das Execucoes] [Quantidade de Execucoes]
+1 [0.1] [0.105041] [3216] [340]
+2 [0.2] [0.101677] [2097] [229]
+3 [0.3] [0.101897] [2955] [322]
+4 [0.4] [0.100343] [2196] [243]
+5 [0.5] [0.100103] [2930] [325]
+6 [0.6] [0.0985748] [2397] [270]
+7 [0.7] [0.0988307] [3231] [363]
+8 [0.8] [0.098516] [2644] [298]
+9 [0.9] [0.0979022] [2460] [279]
+10 [1] [0.0971141] [2895] [331]
+Melhor clique: 12  Probilidade do melhor alfa: 0.105041
+Informacoes dos alfas:
+[id] [Valor do Alfa] [Probabilidade Escolha] [Somatorio de Custos das Execucoes] [Quantidade de Execucoes]
+1 [0.1] [0.104282] [2706] [289]
+2 [0.2] [0.101666] [2601] [285]
+3 [0.3] [0.10192] [2516] [275]
+4 [0.4] [0.099598] [1958] [219]
+5 [0.5] [0.0995752] [3057] [342]
+6 [0.6] [0.0999357] [2162] [241]
+7 [0.7] [0.0994696] [3527] [395]
+8 [0.8] [0.0979485] [2840] [323]
+9 [0.9] [0.0978655] [2126] [242]
+10 [1] [0.0977391] [3413] [389]
+Melhor clique: 12  Probilidade do melhor alfa: 0.104282
+Informacoes dos alfas:
+[id] [Valor do Alfa] [Probabilidade Escolha] [Somatorio de Custos das Execucoes] [Quantidade de Execucoes]
+1 [0.1] [0.103796] [2468] [265]
+2 [0.2] [0.103217] [2788] [301]
+3 [0.3] [0.101356] [2192] [241]
+4 [0.4] [0.100568] [2554] [283]
+5 [0.5] [0.100759] [2595] [287]
+6 [0.6] [0.0986499] [2222] [251]
+7 [0.7] [0.0992241] [3900] [438]
+8 [0.8] [0.0975966] [2172] [248]
+9 [0.9] [0.0977444] [2570] [293]
+10 [1] [0.0970885] [3424] [393]
+Melhor clique: 12  Probilidade do melhor alfa: 0.103796
+Informacoes dos alfas:
+[id] [Valor do Alfa] [Probabilidade Escolha] [Somatorio de Custos das Execucoes] [Quantidade de Execucoes]
+1 [0.1] [0.103428] [2200] [237]
+2 [0.2] [0.102242] [3175] [346]
+3 [0.3] [0.100843] [1783] [197]
+4 [0.4] [0.100992] [3264] [360]
+5 [0.5] [0.101215] [1944] [214]
+6 [0.6] [0.0995452] [3261] [365]
+7 [0.7] [0.0991263] [2927] [329]
+8 [0.8] [0.0981737] [2053] [233]
+9 [0.9] [0.0976293] [3207] [366]
+10 [1] [0.0968058] [3067] [353]
+Melhor clique: 12  Probilidade do melhor alfa: 0.103428
+Informacoes dos alfas:
+[id] [Valor do Alfa] [Probabilidade Escolha] [Somatorio de Custos das Execucoes] [Quantidade de Execucoes]
+1 [0.1] [0.102325] [1856] [202]
+2 [0.2] [0.102841] [3112] [337]
+3 [0.3] [0.100852] [1784] [197]
+4 [0.4] [0.100991] [3319] [366]
+5 [0.5] [0.0997611] [1702] [190]
+6 [0.6] [0.0999341] [2701] [301]
+7 [0.7] [0.099267] [4020] [451]
+8 [0.8] [0.0985466] [2283] [258]
+9 [0.9] [0.0984189] [2563] [290]
+10 [1] [0.0970638] [3556] [408]
+Melhor clique: 13  Probilidade do melhor alfa: 0.102841
+Informacoes dos alfas:
+[id] [Valor do Alfa] [Probabilidade Escolha] [Somatorio de Custos das Execucoes] [Quantidade de Execucoes]
+1 [0.1] [0.104322] [2403] [256]
+2 [0.2] [0.101702] [2727] [298]
+3 [0.3] [0.101968] [2046] [223]
+4 [0.4] [0.100808] [2957] [326]
+5 [0.5] [0.100024] [1971] [219]
+6 [0.6] [0.0988724] [3692] [415]
+7 [0.7] [0.0988804] [2767] [311]
+8 [0.8] [0.0977843] [2314] [263]
+9 [0.9] [0.0983] [3201] [362]
+10 [1] [0.097339] [2864] [327]
+Melhor clique: 12  Probilidade do melhor alfa: 0.104322
+Informacoes dos alfas:
+[id] [Valor do Alfa] [Probabilidade Escolha] [Somatorio de Custos das Execucoes] [Quantidade de Execucoes]
+1 [0.1] [0.104637] [2857] [304]
+2 [0.2] [0.101773] [2532] [277]
+3 [0.3] [0.101802] [2359] [258]
+4 [0.4] [0.101312] [2748] [302]
+5 [0.5] [0.09943] [1803] [202]
+6 [0.6] [0.0989802] [3716] [418]
+7 [0.7] [0.0982131] [2514] [285]
+8 [0.8] [0.0984138] [2307] [261]
+9 [0.9] [0.0976724] [3316] [378]
+10 [1] [0.0977666] [2766] [315]
+Melhor clique: 12  Probilidade do melhor alfa: 0.104637
+Informacoes dos alfas:
+[id] [Valor do Alfa] [Probabilidade Escolha] [Somatorio de Custos das Execucoes] [Quantidade de Execucoes]
+1 [0.1] [0.103958] [2796] [298]
+2 [0.2] [0.102638] [2205] [238]
+3 [0.3] [0.101675] [2478] [270]
+4 [0.4] [0.100924] [2733] [300]
+5 [0.5] [0.100017] [2248] [249]
+6 [0.6] [0.0987146] [3885] [436]
+7 [0.7] [0.099838] [2262] [251]
+8 [0.8] [0.0983731] [2584] [291]
+9 [0.9] [0.0981816] [3350] [378]
+10 [1] [0.0956805] [2496] [289]
+Melhor clique: 12  Probilidade do melhor alfa: 0.103958
+Informacoes dos alfas:
+[id] [Valor do Alfa] [Probabilidade Escolha] [Somatorio de Custos das Execucoes] [Quantidade de Execucoes]
+1 [0.1] [0.10303] [3122] [338]
+2 [0.2] [0.102662] [1988] [216]
+3 [0.3] [0.101935] [2970] [325]
+4 [0.4] [0.0998935] [2212] [247]
+5 [0.5] [0.100465] [2675] [297]
+6 [0.6] [0.099251] [3746] [421]
+7 [0.7] [0.0991087] [2088] [235]
+8 [0.8] [0.0981661] [2922] [332]
+9 [0.9] [0.0977092] [2952] [337]
+10 [1] [0.0977787] [2209] [252]
+Melhor clique: 12  Probilidade do melhor alfa: 0.10303
+C500.9 guloso :
+43
+C500.9 randomizado alfa 0.1
+49
+49
+49
+48
+48
+49
+48
+50
+49
+48
+C500.9 randomizado alfa 0.2
+48
+49
+49
+48
+49
+48
+48
+48
+48
+49
+C500.9 randomizado alfa 0.3
+47
+48
+49
+48
+48
+50
+49
+48
+48
+48
+C500.9 randomizado reativo:
+Informacoes dos alfas:
+[id] [Valor do Alfa] [Probabilidade Escolha] [Somatorio de Custos das Execucoes] [Quantidade de Execucoes]
+1 [0.1] [0.106428] [16662] [387]
+2 [0.2] [0.104415] [10222] [242]
+3 [0.3] [0.101923] [14060] [341]
+4 [0.4] [0.101939] [9526] [231]
+5 [0.5] [0.100418] [13243] [326]
+6 [0.6] [0.0990725] [9699] [242]
+7 [0.7] [0.0977837] [13845] [350]
+8 [0.8] [0.0968596] [11789] [301]
+9 [0.9] [0.0959726] [9512] [245]
+10 [1] [0.0951889] [12900] [335]
+Melhor clique: 49  Probilidade do melhor alfa: 0.106428
+Informacoes dos alfas:
+[id] [Valor do Alfa] [Probabilidade Escolha] [Somatorio de Custos das Execucoes] [Quantidade de Execucoes]
+1 [0.1] [0.106622] [11419] [265]
+2 [0.2] [0.103357] [14411] [345]
+3 [0.3] [0.102751] [9634] [232]
+4 [0.4] [0.101631] [14540] [354]
+5 [0.5] [0.100266] [9239] [228]
+6 [0.6] [0.099465] [12180] [303]
+7 [0.7] [0.0977949] [15456] [391]
+8 [0.8] [0.0976225] [9311] [236]
+9 [0.9] [0.0957845] [12039] [311]
+10 [1] [0.0947058] [12822] [335]
+Melhor clique: 49  Probilidade do melhor alfa: 0.106622
+Informacoes dos alfas:
+[id] [Valor do Alfa] [Probabilidade Escolha] [Somatorio de Custos das Execucoes] [Quantidade de Execucoes]
+1 [0.1] [0.106416] [12822] [298]
+2 [0.2] [0.10423] [12980] [308]
+3 [0.3] [0.102845] [10770] [259]
+4 [0.4] [0.101225] [13097] [320]
+5 [0.5] [0.100256] [9526] [235]
+6 [0.6] [0.0993722] [18643] [464]
+7 [0.7] [0.0975267] [8202] [208]
+8 [0.8] [0.0968661] [12298] [314]
+9 [0.9] [0.0964715] [12872] [330]
+10 [1] [0.094792] [10121] [264]
+Melhor clique: 48  Probilidade do melhor alfa: 0.106416
+Informacoes dos alfas:
+[id] [Valor do Alfa] [Probabilidade Escolha] [Somatorio de Custos das Execucoes] [Quantidade de Execucoes]
+1 [0.1] [0.106019] [17180] [401]
+2 [0.2] [0.104342] [8981] [213]
+3 [0.3] [0.102544] [15498] [374]
+4 [0.4] [0.101884] [9099] [221]
+5 [0.5] [0.100031] [12329] [305]
+6 [0.6] [0.0996622] [14257] [354]
+7 [0.7] [0.098838] [10145] [254]
+8 [0.8] [0.0966302] [12808] [328]
+9 [0.9] [0.0956314] [10782] [279]
+10 [1] [0.0944184] [10340] [271]
+Melhor clique: 50  Probilidade do melhor alfa: 0.106019
+Informacoes dos alfas:
+[id] [Valor do Alfa] [Probabilidade Escolha] [Somatorio de Custos das Execucoes] [Quantidade de Execucoes]
+1 [0.1] [0.106554] [14334] [333]
+2 [0.2] [0.103602] [11928] [285]
+3 [0.3] [0.102596] [12268] [296]
+4 [0.4] [0.101084] [11148] [273]
+5 [0.5] [0.100491] [11651] [287]
+6 [0.6] [0.0993363] [9310] [232]
+7 [0.7] [0.098273] [16433] [414]
+8 [0.8] [0.0969615] [9910] [253]
+9 [0.9] [0.0961744] [10762] [277]
+10 [1] [0.0949283] [13422] [350]
+Melhor clique: 49  Probilidade do melhor alfa: 0.106554
+Informacoes dos alfas:
+[id] [Valor do Alfa] [Probabilidade Escolha] [Somatorio de Custos das Execucoes] [Quantidade de Execucoes]
+1 [0.1] [0.105874] [10991] [257]
+2 [0.2] [0.104065] [15175] [361]
+3 [0.3] [0.102198] [8793] [213]
+4 [0.4] [0.101863] [15183] [369]
+5 [0.5] [0.100377] [8312] [205]
+6 [0.6] [0.0993535] [15451] [385]
+7 [0.7] [0.0978798] [13166] [333]
+8 [0.8] [0.0967742] [9460] [242]
+9 [0.9] [0.0968485] [13262] [339]
+10 [1] [0.0947677] [11331] [296]
+Melhor clique: 49  Probilidade do melhor alfa: 0.105874
+Informacoes dos alfas:
+[id] [Valor do Alfa] [Probabilidade Escolha] [Somatorio de Custos das Execucoes] [Quantidade de Execucoes]
+1 [0.1] [0.106062] [15168] [354]
+2 [0.2] [0.104304] [10745] [255]
+3 [0.3] [0.102459] [13411] [324]
+4 [0.4] [0.100977] [10851] [266]
+5 [0.5] [0.100199] [11496] [284]
+6 [0.6] [0.0996781] [16953] [421]
+7 [0.7] [0.0977176] [8369] [212]
+8 [0.8] [0.0972579] [13555] [345]
+9 [0.9] [0.0961883] [11269] [290]
+10 [1] [0.0951565] [9572] [249]
+Melhor clique: 47  Probilidade do melhor alfa: 0.106062
+Informacoes dos alfas:
+[id] [Valor do Alfa] [Probabilidade Escolha] [Somatorio de Custos das Execucoes] [Quantidade de Execucoes]
+1 [0.1] [0.105782] [16726] [391]
+2 [0.2] [0.104101] [9893] [235]
+3 [0.3] [0.102419] [14579] [352]
+4 [0.4] [0.101454] [8985] [219]
+5 [0.5] [0.100458] [13853] [341]
+6 [0.6] [0.0987632] [10546] [264]
+7 [0.7] [0.0976772] [12956] [328]
+8 [0.8] [0.0973975] [12013] [305]
+9 [0.9] [0.0962875] [10046] [258]
+10 [1] [0.0956595] [11876] [307]
+Melhor clique: 49  Probilidade do melhor alfa: 0.105782
+Informacoes dos alfas:
+[id] [Valor do Alfa] [Probabilidade Escolha] [Somatorio de Custos das Execucoes] [Quantidade de Execucoes]
+1 [0.1] [0.106311] [12032] [280]
+2 [0.2] [0.10401] [14294] [340]
+3 [0.3] [0.1026] [10119] [244]
+4 [0.4] [0.101203] [14031] [343]
+5 [0.5] [0.100098] [9589] [237]
+6 [0.6] [0.0992682] [11917] [297]
+7 [0.7] [0.0978547] [15228] [385]
+8 [0.8] [0.0971607] [8640] [220]
+9 [0.9] [0.0962312] [11747] [302]
+10 [1] [0.095263] [13554] [352]
+Melhor clique: 49  Probilidade do melhor alfa: 0.106311
+Informacoes dos alfas:
+[id] [Valor do Alfa] [Probabilidade Escolha] [Somatorio de Custos das Execucoes] [Quantidade de Execucoes]
+1 [0.1] [0.106172] [12139] [283]
+2 [0.2] [0.103904] [13307] [317]
+3 [0.3] [0.102249] [10328] [250]
+4 [0.4] [0.101868] [14034] [341]
+5 [0.5] [0.100264] [8466] [209]
+6 [0.6] [0.0990266] [16363] [409]
+7 [0.7] [0.0988859] [12105] [303]
+8 [0.8] [0.0970064] [10660] [272]
+9 [0.9] [0.0959183] [12323] [318]
+10 [1] [0.0947059] [11402] [298]
+Melhor clique: 48  Probilidade do melhor alfa: 0.106172
+brock400_2 guloso :
+20
+brock400_2 randomizado alfa 0.1
+22
+23
+22
+23
+22
+22
+23
+23
+22
+23
+brock400_2 randomizado alfa 0.2
+22
+22
+21
+22
+22
+22
+22
+22
+22
+22
+brock400_2 randomizado alfa 0.3
+22
+21
+23
+22
+22
+22
+23
+22
+23
+22
+brock400_2 randomizado reativo:
+Informacoes dos alfas:
+[id] [Valor do Alfa] [Probabilidade Escolha] [Somatorio de Custos das Execucoes] [Quantidade de Execucoes]
+1 [0.1] [0.104901] [5289] [292]
+2 [0.2] [0.102799] [4616] [260]
+3 [0.3] [0.102264] [5740] [325]
+4 [0.4] [0.099973] [5197] [301]
+5 [0.5] [0.100477] [5362] [309]
+6 [0.6] [0.0994444] [5118] [298]
+7 [0.7] [0.0986914] [4602] [270]
+8 [0.8] [0.0976354] [5868] [348]
+9 [0.9] [0.0971537] [5084] [303]
+10 [1] [0.0966615] [4908] [294]
+Melhor clique: 22  Probilidade do melhor alfa: 0.104901
+Informacoes dos alfas:
+[id] [Valor do Alfa] [Probabilidade Escolha] [Somatorio de Custos das Execucoes] [Quantidade de Execucoes]
+1 [0.1] [0.105424] [4820] [265]
+2 [0.2] [0.102829] [4932] [278]
+3 [0.3] [0.101977] [5243] [298]
+4 [0.4] [0.100764] [6102] [351]
+5 [0.5] [0.100596] [5172] [298]
+6 [0.6] [0.099715] [4645] [270]
+7 [0.7] [0.0981339] [4656] [275]
+8 [0.8] [0.0977161] [5732] [340]
+9 [0.9] [0.0971298] [4910] [293]
+10 [1] [0.0957151] [5482] [332]
+Melhor clique: 22  Probilidade do melhor alfa: 0.105424
+Informacoes dos alfas:
+[id] [Valor do Alfa] [Probabilidade Escolha] [Somatorio de Custos das Execucoes] [Quantidade de Execucoes]
+1 [0.1] [0.105284] [4850] [267]
+2 [0.2] [0.103776] [5086] [284]
+3 [0.3] [0.101684] [5421] [309]
+4 [0.4] [0.0999767] [5261] [305]
+5 [0.5] [0.100439] [5268] [304]
+6 [0.6] [0.0989988] [4458] [261]
+7 [0.7] [0.0988157] [5234] [307]
+8 [0.8] [0.0971491] [5548] [331]
+9 [0.9] [0.0974446] [5195] [309]
+10 [1] [0.096433] [5374] [323]
+Melhor clique: 22  Probilidade do melhor alfa: 0.105284
+Informacoes dos alfas:
+[id] [Valor do Alfa] [Probabilidade Escolha] [Somatorio de Custos das Execucoes] [Quantidade de Execucoes]
+1 [0.1] [0.10515] [4981] [274]
+2 [0.2] [0.103441] [5061] [283]
+3 [0.3] [0.101821] [5105] [290]
+4 [0.4] [0.100651] [6786] [390]
+5 [0.5] [0.099181] [4784] [279]
+6 [0.6] [0.0997558] [4691] [272]
+7 [0.7] [0.0985213] [5178] [304]
+8 [0.8] [0.0976818] [4965] [294]
+9 [0.9] [0.0975731] [4892] [290]
+10 [1] [0.0962245] [5390] [324]
+Melhor clique: 22  Probilidade do melhor alfa: 0.10515
+Informacoes dos alfas:
+[id] [Valor do Alfa] [Probabilidade Escolha] [Somatorio de Custos das Execucoes] [Quantidade de Execucoes]
+1 [0.1] [0.105775] [5336] [292]
+2 [0.2] [0.103207] [5153] [289]
+3 [0.3] [0.101028] [5498] [315]
+4 [0.4] [0.100857] [5872] [337]
+5 [0.5] [0.100137] [4515] [261]
+6 [0.6] [0.09889] [4647] [272]
+7 [0.7] [0.0985159] [5123] [301]
+8 [0.8] [0.0982184] [4853] [286]
+9 [0.9] [0.0969126] [5341] [319]
+10 [1] [0.0964593] [5466] [328]
+Melhor clique: 23  Probilidade do melhor alfa: 0.105775
+Informacoes dos alfas:
+[id] [Valor do Alfa] [Probabilidade Escolha] [Somatorio de Custos das Execucoes] [Quantidade de Execucoes]
+1 [0.1] [0.104429] [5475] [304]
+2 [0.2] [0.103183] [4342] [244]
+3 [0.3] [0.101662] [5628] [321]
+4 [0.4] [0.100641] [5693] [328]
+5 [0.5] [0.0998283] [5010] [291]
+6 [0.6] [0.0997287] [5023] [292]
+7 [0.7] [0.0985522] [4742] [279]
+8 [0.8] [0.0983883] [5328] [314]
+9 [0.9] [0.0978939] [5622] [333]
+10 [1] [0.0956935] [4852] [294]
+Melhor clique: 23  Probilidade do melhor alfa: 0.104429
+Informacoes dos alfas:
+[id] [Valor do Alfa] [Probabilidade Escolha] [Somatorio de Custos das Execucoes] [Quantidade de Execucoes]
+1 [0.1] [0.105713] [5172] [283]
+2 [0.2] [0.10281] [4870] [274]
+3 [0.3] [0.101782] [5402] [307]
+4 [0.4] [0.101031] [5694] [326]
+5 [0.5] [0.100463] [5332] [307]
+6 [0.6] [0.0992132] [4854] [283]
+7 [0.7] [0.0981176] [4529] [267]
+8 [0.8] [0.0975831] [6495] [385]
+9 [0.9] [0.0966653] [4244] [254]
+10 [1] [0.0966211] [5245] [314]
+Melhor clique: 22  Probilidade do melhor alfa: 0.105713
+Informacoes dos alfas:
+[id] [Valor do Alfa] [Probabilidade Escolha] [Somatorio de Custos das Execucoes] [Quantidade de Execucoes]
+1 [0.1] [0.105544] [4806] [263]
+2 [0.2] [0.103175] [5109] [286]
+3 [0.3] [0.102307] [5066] [286]
+4 [0.4] [0.100537] [5605] [322]
+5 [0.5] [0.0995838] [4776] [277]
+6 [0.6] [0.0988702] [4485] [262]
+7 [0.7] [0.0985299] [5169] [303]
+8 [0.8] [0.0979921] [6040] [356]
+9 [0.9] [0.0972462] [5169] [307]
+10 [1] [0.0962159] [5632] [338]
+Melhor clique: 23  Probilidade do melhor alfa: 0.105544
+Informacoes dos alfas:
+[id] [Valor do Alfa] [Probabilidade Escolha] [Somatorio de Custos das Execucoes] [Quantidade de Execucoes]
+1 [0.1] [0.104884] [4908] [270]
+2 [0.2] [0.103601] [5243] [292]
+3 [0.3] [0.10225] [5086] [287]
+4 [0.4] [0.100243] [5629] [324]
+5 [0.5] [0.100139] [4981] [287]
+6 [0.6] [0.10004] [4716] [272]
+7 [0.7] [0.0979228] [5329] [314]
+8 [0.8] [0.0976116] [5735] [339]
+9 [0.9] [0.0967211] [4832] [288]
+10 [1] [0.0965883] [5474] [327]
+Melhor clique: 24  Probilidade do melhor alfa: 0.104884
+Informacoes dos alfas:
+[id] [Valor do Alfa] [Probabilidade Escolha] [Somatorio de Custos das Execucoes] [Quantidade de Execucoes]
+1 [0.1] [0.105112] [5220] [288]
+2 [0.2] [0.102547] [4792] [271]
+3 [0.3] [0.101327] [4735] [271]
+4 [0.4] [0.100268] [6207] [359]
+5 [0.5] [0.100294] [5292] [306]
+6 [0.6] [0.0997568] [4524] [263]
+7 [0.7] [0.0987656] [5007] [294]
+8 [0.8] [0.0981652] [4891] [289]
+9 [0.9] [0.0972692] [5384] [321]
+10 [1] [0.0964948] [5624] [338]
+Melhor clique: 23  Probilidade do melhor alfa: 0.105112
+
+Process returned 0 (0x0)   execution time : 33994.328 s
+Press any key to continue.
+
