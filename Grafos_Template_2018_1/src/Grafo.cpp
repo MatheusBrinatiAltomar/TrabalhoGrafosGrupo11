@@ -501,7 +501,45 @@ void Grafo::acharCliqueMaxima(float alfa, int maxIteracoes)
      }
      cout << bestSolution.size() << endl;
 }
+int Grafo::acharCliqueMaxima2(float alfa, int maxIteracoes)
+{
+    srand(time(0)); // Inicia semente de randomização
+    sort(listaNos.begin(),listaNos.end()); // Ordena nós pelo grau com base no operator < definido em No.h
+    vector <No> currentSolution; // Para guardar a solução correspondente a cada iteração
+    vector <No> bestSolution; // Para guardar a melhor solução
+    vector <No> listaCandidatos; // Para guardar os nós candidatos
+    int aux = 0; // var auxiliar para calcularmos o indice aleatório da lista de Candidatos
+    int i = 0, j =0;
 
+    bestSolution.push_back(listaNos[0]);
+
+    while(i < maxIteracoes) {
+    listaCandidatos = listaNos;
+        bool e_vizinho = true;
+
+        while(listaCandidatos.size() > 0){
+
+            aux = (int)ceil(listaCandidatos.size() * alfa);
+
+            j = rand() % aux;
+
+            if(formaClique(currentSolution,listaCandidatos[j] ))
+                currentSolution.push_back(listaCandidatos[j]);
+
+           listaCandidatos.erase(listaCandidatos.begin() + j);
+
+        }
+
+        if(currentSolution.size() > bestSolution.size()){
+
+           bestSolution = currentSolution;
+        }
+        currentSolution.clear();
+        i++;
+     }
+     //cout << bestSolution.size() << endl;
+     return bestSolution.size();
+}
 bool Grafo::formaClique(vector<No>nosNaSolucao, No noCandidato)
 {
      for(vector <No>::iterator n = nosNaSolucao.begin(); n != nosNaSolucao.end() ; n++)
@@ -527,8 +565,11 @@ bool Grafo::verificaSolucao(vector<No> nosNaSolucao)
 //Algoritmo Guloso Randomizado Reativo
 void Grafo::gulosoRandomizadoReativo(int alfaRR, int betaRR, int gammaRR, int itTotal)
 {
+    srand(time(0));
     double **alfas = new double*[alfaRR]; //Alocando o vetor dos alfas
-
+    int melhorClique = 1;
+    double soma;
+    double maiorAlfa = 0;
     //Criando os alfas baseado na quantidade passada (alfaRR)
     for(int i = 0; i < alfaRR; i++){
         alfas[i] = new double[4];
@@ -547,18 +588,22 @@ void Grafo::gulosoRandomizadoReativo(int alfaRR, int betaRR, int gammaRR, int it
             for(int i = 0; i < alfaRR; i++){
                 double qi, qj = 0;
                 if(alfas[i][3] != 0){
-                    qi = (sumMenorInterferencia/(alfas[i][2]/alfas[i][3]));
+                    qi = ((alfas[i][2]/alfas[i][3])/melhorClique);
                     for(int j = 0; j < alfaRR; j++){
                         if(alfas[j][3] != 0)
-                            qj += (sumMenorInterferencia/(alfas[j][2]/alfas[j][3]));
+                            qj += ((alfas[j][2]/alfas[j][3])/melhorClique);
                     }
+                    alfas[i][1] = qi / (double)qj;
                 }
-                else{
-                    qi = 0;
-                    qj = 1;
-                }
-
-                alfas[i][1] = qi / (double)qj;
+            }
+            soma=0;
+            for(int j = 0; j < alfaRR; j++)
+            {
+                soma+= alfas[j][1];
+            }
+            for(int j = 0; j < alfaRR; j++)
+            {
+                alfas[j][1] = alfas[j][1]/soma;
             }
         }
 
@@ -575,7 +620,9 @@ void Grafo::gulosoRandomizadoReativo(int alfaRR, int betaRR, int gammaRR, int it
         }
 
         //Executando o Guloso Randomizado com o Alfa escolhido
-        float cost = acharCliqueMaxima(alfas[ind][0],1);
+        int cost = acharCliqueMaxima2(alfas[ind][0],1);
+        if (cost > melhorClique)
+            melhorClique = cost;
         alfas[ind][2] += cost;
         alfas[ind][3]++;
     }
@@ -584,5 +631,8 @@ void Grafo::gulosoRandomizadoReativo(int alfaRR, int betaRR, int gammaRR, int it
     cout << "[id] [Valor do Alfa] [Probabilidade Escolha] [Somatorio de Custos das Execucoes] [Quantidade de Execucoes]\n";
     for(int i = 0; i < alfaRR; i++){
         cout << i + 1 << " [" << alfas[i][0] << "] [" << alfas[i][1] << "] [" << alfas[i][2] << "] [" << alfas[i][3] << "]\n";
+        if (maiorAlfa<alfas[i][1])
+            maiorAlfa = alfas[i][1];
     }
+    cout << "Melhor clique: " << melhorClique << "  Probilidade do melhor alfa: " << maiorAlfa << endl;
 }

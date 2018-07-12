@@ -37,6 +37,7 @@ class Grafo{
         void gulosoRandomizadoReativo(int alfaRR, int betaRR, int gammaRR, int itTotal);
         bool formaClique(vector <No> nosNaSolucao, No noCandidato);
         bool verificaSolucao(vector <No> nosNaSolucao);
+        int acharCliqueMaxima2(float alfa, int maxIteracoes);
 };
 
 
