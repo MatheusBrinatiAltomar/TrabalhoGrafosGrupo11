@@ -45,7 +45,7 @@ void Grafo::removerNo (int id)
 void Grafo::showInfo(){
     int i=0;
     for (std::vector<No>::iterator it = listaNos.begin(); it != listaNos.end(); ++it) {
-            cout << "No: " << it->getID() << endl;
+            cout << "No: " << listaNos[i].getID() << endl;
 			for(std::vector<Aresta>::iterator a = listaNos[i].listaAresta.begin(); a != listaNos[i].listaAresta.end(); ++a){
                 cout << a->getIDNo() << endl;
 			}
@@ -92,7 +92,7 @@ bool Grafo::noEstaNoGrafo(int index)
 }
 
 
-void Grafo::readFile(char **path)
+void Grafo::readFile(string path)
 {
 	int m;
 	listaNos.reserve(m);
@@ -100,10 +100,13 @@ void Grafo::readFile(char **path)
 	ifstream f;
 	int id=0;
 	int id_destino;
-	f.open(path[1]);
+	f.open(path);
 	if (f.is_open()) {
 		f >> m;
+		for(int a=1;a<=m;a++)
+                adcionarNo(a,0);
 		while (true) {
+
 			double value;
 			if(count > 2){
                 count = 0;
@@ -115,16 +118,18 @@ void Grafo::readFile(char **path)
                 if (count == 0) {
                     id = value;
                     if(!noEstaNoGrafo(id)){ // Nó está mo grafo?
-                        adcionarNo(id,0);
+                       // adcionarNo(id,0);
                     }
                 }
                 else if (count == 1) {
                     id_destino = value;
                     if(!noEstaNoGrafo(id_destino)){ // Nó está mo grafo?
-                        adcionarNo(id_destino,0);
+                       // adcionarNo(id_destino,0);
                     }
                 }
                 else if( count == 2){
+                       // listaNos[id-1].adicionaAresta(id_destino,false,0);
+                    //listaNos[id_destino-1].adicionaAresta(id,false,0);
                     for (std::vector<No>::iterator it = listaNos.begin(); it != listaNos.end(); ++it) {
                             if( it->getID() == id )
                                     it->adicionaAresta(id_destino,false,value);
@@ -158,7 +163,10 @@ void Grafo::readFile2(string path)
 	if (f.is_open()) {
 		f >> m;
 		f >> n;
+		for(int a=1;a<=m;a++)
+                adcionarNo(a,0);
 		while (true) {
+
 			double value;
 			string aux;
 			if(count > 2)
@@ -173,24 +181,26 @@ void Grafo::readFile2(string path)
                             break;
                     }
                     id = value;
-                    if(!noEstaNoGrafo(id)){ // N� est� mo grafo?
+                   /* if(!noEstaNoGrafo(id)){ // N� est� mo grafo?
                         adcionarNo(id,0);
-                    }
+                    } */
                 }
                 else if(count == 2){
                     if (!(f >> value)) {
                             break;
                     }
                     id_destino = value;
-                    if(!noEstaNoGrafo(id_destino)){ // N� est� mo grafo?
+                   /* if(!noEstaNoGrafo(id_destino)){ // N� est� mo grafo?
                         adcionarNo(id_destino,0);
-                    }
-                    for (std::vector<No>::iterator it = listaNos.begin(); it != listaNos.end(); ++it) {
+                    }*/
+                    listaNos[id-1].adicionaAresta(id_destino,false,0);
+                    listaNos[id_destino-1].adicionaAresta(id,false,0);
+                    /*for (std::vector<No>::iterator it = listaNos.begin(); it != listaNos.end(); ++it) {
                             if( it->getID() == id )
                                     it->adicionaAresta(id_destino,false,0);
                             if( it->getID() == id_destino )
                                     it->adicionaAresta(id,false,0);
-                    }
+                    }*/
                 }
 				count++;
 		}
@@ -369,19 +379,6 @@ void Grafo::adicionaAresta(int id1, int id2, float peso)
     }
 }
 
-bool Grafo::vizinho(int id1, int id2)
-{
-    for (std::vector<No>::iterator it = listaNos.begin(); it != listaNos.end(); ++it){
-        if(it->getID() == id1 ){
-            return it->eVizinho(id2);
-        }
-        if(it->getID() == id2 ){
-            return it->eVizinho(id1);
-        }
-    }
-    return false;
-}
-
 bool Grafo::tenta2ColorirGrafo(int id, int colorArr[] ){
     colorArr[id] = 1;
 
@@ -466,20 +463,36 @@ void Grafo::acharCliqueMaxima1()
 
 }
 
+bool Grafo::vizinho(int id1, int id2)
+{
+
+
+   return  listaNos[id1-1].eVizinho(id2);
+
+
+}
+
+
+
+
+
 void Grafo::acharCliqueMaxima(float alfa, int maxIteracoes)
 {
     srand(time(0)); // Inicia semente de randomização
-    sort(listaNos.begin(),listaNos.end()); // Ordena nós pelo grau com base no operator < definido em No.h
+    //sort(listaNos.begin(),listaNos.end()); // Ordena nós pelo grau com base no operator < definido em No.h
     vector <No> currentSolution; // Para guardar a solução correspondente a cada iteração
     vector <No> bestSolution; // Para guardar a melhor solução
-    vector <No> listaCandidatos; // Para guardar os nós candidatos
+     vector <No> listaCandidatos; // Para guardar os nós candidatos definida em grafo.h
     int aux = 0; // var auxiliar para calcularmos o indice aleatório da lista de Candidatos
     int i = 0, j =0;
+
 
     bestSolution.push_back(listaNos[0]);
 
     while(i < maxIteracoes) {
+
     listaCandidatos = listaNos;
+    sort(listaCandidatos.begin(),listaCandidatos.end());
         bool e_vizinho = true;
 
         while(listaCandidatos.size() > 0){
@@ -488,7 +501,7 @@ void Grafo::acharCliqueMaxima(float alfa, int maxIteracoes)
 
             j = rand() % aux;
 
-            if(formaClique(currentSolution,listaCandidatos[j] ))
+            if(formaClique(currentSolution,listaCandidatos[j]))
                 currentSolution.push_back(listaCandidatos[j]);
 
            listaCandidatos.erase(listaCandidatos.begin() + j);

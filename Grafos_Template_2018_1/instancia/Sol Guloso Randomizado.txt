@@ -1,0 +1,151 @@
+Grandes
+
+Keller6
+N Nos: 3361
+N Arestas: 4.619.898
+Solucao: 36
+Best Solution: 69
+Time: 532.784s
+
+
+mann_a81
+N Nos:  3321
+N Arestas:  5.506.380 edges
+Solucao: 1080
+Best Solution: 1100
+Time: 557.943 s
+
+p_hat1500-3
+N Nos: 1500
+N arestas: 847.244
+MaxIterations: 10
+Test1: Solucao Encontrada: 82  Tempo: 90.984s  
+Test2: Solucao Encontrada: 82
+Test3: Solucao Encontrada: 78
+Test4: Solucao Encontrada: 79
+Test5: Solucao Encontrada: 79
+Test6: Solucao Encontrada: 79
+Test7: Solucao Encontrada: 82
+Test8: Solucao Encontrada: 81
+Test9: Solucao Encontrada: 77
+Test10: Solucao Encontrada: 81
+Tempo Toal: 533.692 s
+Best: 94
+Time: 
+
+
+C4000
+Testes:
+1: 13
+2: 13
+3: 13
+4: 14
+5: 15
+6: 14
+7: 14
+8: 13
+9:13
+10:14
+
+N Nos: 4000
+N arestas: 4000268	
+Solucao Encontrada: 12
+Best: 18
+Time: Total Time 4294.910 s
+
+-----------------------------------------------
+
+Médias
+
+hamming10-4
+Testes:
+Maxiteration: 100
+1: 36
+2: 36
+3: 34
+4: 36
+5: 36
+6: 34
+7: 35
+8: 38
+9: 36
+10: 36
+N Nos: 1024
+N arestas: 434176
+Best: 40
+Time Total: 1454.756 s
+
+p_hat700-3
+Testes:
+MaxIterations: 100
+1: 58
+2: 57
+3: 58
+4: 59
+5: 58
+6:58
+7: 57
+8: 58
+9: 58
+10: 59
+N Nos: 700
+N arestas: 183010	
+Best: 62
+Total Time: 740.437  s
+
+
+MANN_a45
+Teste
+1: 330
+2: 331
+3: 330
+4: 330
+5: 331
+6: 330
+7: 330
+8: 331
+9: 331
+10: 331
+N Nos: 1035 
+N arestas: 533115
+Best: 345
+Total Time: 7605.755s
+
+----------------------------------------------
+
+Pequenas:
+
+brock200_2
+Testes:
+Todos os testes deram 10
+N Nos: 200
+N arestas: 9.876
+Best: 12
+Total Time: 111.329 s
+
+brock400_4
+Testes:
+1: 23
+2: 23
+3: 22
+4: 23 
+5: 22
+6: 23
+7: 23
+8: 23
+9: 23
+10: 24
+N Nos: 400
+N arestas: 59.765
+Solucao Encontrada: 18
+Best: 33
+Time: 153.55s
+
+p_hat300-1
+Todos os testes deram 8
+N nos: 300
+N arestas: 10.933
+Best: 8
+Total Time: 166s
+
+------------------------------------
